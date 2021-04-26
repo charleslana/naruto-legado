@@ -2,6 +2,7 @@ import config from './config.js';
 import click from './click.js';
 import ninjasOnline from './ninjasOnline.js';
 import eventsActive from './eventsActive.js';
+import addSubmit from './addSubmit.js';
 
 const main = document.querySelector('main');
 
@@ -20,6 +21,7 @@ const loadPage = (page = 'home') => {
             main.setAttribute('page-now', page);
             click(loadPage);
             fetchPageContent(page);
+            addSubmit();
         })
         .catch(error => {
             console.error(error.message);
