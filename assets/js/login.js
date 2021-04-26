@@ -12,13 +12,25 @@ const login = () => {
 }
 
 const doLogin = () => {
-    const submit = document.querySelector('#form-login input[type="submit"]');
-    submit.value = 'AGUARDE';
-    submit.setAttribute('disabled', true);
+    const inputLogin = document.getElementById('login').value;
+    const inputPassword = document.getElementById('password').value;
+    const selectServer = document.getElementById('server').value;
 
-    fetch(config.apiBack + config.login)
+    if (selectServer < 1) {
+        return notificationError('Por favor selecione o servidor.');
+    }
+
+    disableButton();
+
+    fetch(config.apiBack + config.login, {
+        // method: 'post',
+        // body: JSON.stringify({
+        //     inputLogin,
+        //     inputPassword
+        // })
+    })
         .then(response => {
-            response.json();
+            return response.json();
         })
         .then(data => {
             if (data.success) {
@@ -26,14 +38,27 @@ const doLogin = () => {
             }
 
             if (data.error) {
-                submit.value = 'ENTRAR';
-                submit.removeAttribute('disabled');
-                notificationError(data.message);
+                notificationError(data.error.message);
             }
+
+            enableButton();
         })
         .catch(error => {
+            enableButton();
             notificationError(error.message);
         });
+}
+
+const disableButton = () => {
+    const submit = document.querySelector('#form-login input[type="submit"]');
+    submit.value = 'AGUARDE';
+    submit.setAttribute('disabled', true);
+}
+
+const enableButton = () => {
+    const submit = document.querySelector('#form-login input[type="submit"]');
+    submit.value = 'ENTRAR';
+    submit.removeAttribute('disabled');
 }
 
 export default login;
