@@ -15,19 +15,20 @@ const doLogin = () => {
     const submit = document.querySelector('#form-login input[type="submit"]');
     submit.value = 'AGUARDE';
     submit.setAttribute('disabled', true);
-    notificationError('Algum erro');
 
     fetch(config.apiBack + config.login)
         .then(response => {
-            return response.json();
+            response.json();
         })
         .then(data => {
             if (data.success) {
-
+                alert('redirect');
             }
 
             if (data.error) {
-                
+                submit.value = 'ENTRAR';
+                submit.removeAttribute('disabled');
+                notificationError(data.message);
             }
         })
         .catch(error => {
