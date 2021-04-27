@@ -12,7 +12,6 @@ nav ul a {
     display: block;
 }
 
-input[type]:not(.browser-default),
 input[type='text']:not(.browser-default),
 input[type='password']:not(.browser-default),
 input[type='email']:not(.browser-default),
@@ -80,4 +79,9 @@ select {
     background-color: rgb(48, 8, 8);
     color: white;
     border-color: rgb(150, 150, 150);
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
