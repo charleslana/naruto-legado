@@ -128,10 +128,6 @@ hr {
     border-bottom: 1px dotted rgb(159 37 37);
 }
 
-.tooltipped::before {
-    border-bottom: 2px dotted rgb(159 37 37);
-}
-
 .material-tooltip {
     max-width: 300px;
     background-color: rgb(21, 20, 20);
