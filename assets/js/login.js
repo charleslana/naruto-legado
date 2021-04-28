@@ -17,7 +17,7 @@ const doLogin = () => {
     const selectServer = document.getElementById('server').value;
 
     if (selectServer < 1) {
-        return notificationError('Por favor selecione o servidor.');
+        return notificationError('Por favor selecione o server.');
     }
 
     disableButton();
@@ -26,7 +26,8 @@ const doLogin = () => {
         // method: 'post',
         // body: JSON.stringify({
         //     inputLogin,
-        //     inputPassword
+        //     inputPassword,
+        //     selectServer
         // })
     })
         .then(response => {

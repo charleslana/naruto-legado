@@ -1,5 +1,7 @@
 import characters from '../../mock/characters.js';
 import villages from '../../mock/villages.js';
+import config from './config.js';
+import { notificationError, notificationSuccess } from './notification.js';
 
 export const listCharacters = () => {
     const registerCharacters = document.getElementById('characters');
@@ -9,7 +11,7 @@ export const listCharacters = () => {
             labelCharacters += `
             <label class="carousel-item">
                 <img src="../assets/img/avatar/${character.name}/${character.image}.png" alt="${character.name}" height="150px">
-                <input class="with-gap" name="group2" type="radio" value="${character.value}" />
+                <input class="with-gap" name="group2" type="radio" value="${character.value}" required />
                 <span>${character.name}</span>
             </label>       
             `;
@@ -27,7 +29,7 @@ export const listVillages = () => {
             <div class="col m3 col-padding">
                 <label>
                     <img src="../assets//img/villages/${village.image}.png" alt="${village.name}" height="50px" />
-                    <input class="with-gap" name="group3" type="radio" value="${village.value}" />
+                    <input class="with-gap" name="group3" type="radio" value="${village.value}" required />
                     <span>${village.name}</span>
                 </label>
             </div>
@@ -35,4 +37,79 @@ export const listVillages = () => {
         });
         registerVillages.innerHTML = labelVillages;
     }
+}
+
+export const register = () => {
+    const buttonRegister = document.getElementById('form-register');
+    if (buttonRegister) {
+        buttonRegister.addEventListener('submit', function (event) {
+            event.preventDefault();
+            signUp();
+        });
+    }
+}
+
+const signUp = () => {
+    const selectServer = document.getElementById('server').value;
+    const inputLogin = document.getElementById('login').value;
+    const inputEmail = document.getElementById('email').value;
+    const inputPassword = document.getElementById('password').value;
+    const inputConfirmPassword = document.getElementById('confirmPassword').value;
+    const radioStyleNinja = document.querySelector('input[name="group1"]:checked').value;
+    const radioCharacter = document.querySelector('input[name="group2"]:checked').value;
+    const radioVillage = document.querySelector('input[name="group3"]:checked').value;
+
+    if (selectServer < 1) {
+        return notificationError('Por favor selecione um server.');
+    }
+
+    if (inputPassword !== inputConfirmPassword) {
+        return notificationError('As senhas digitadas não coincidem.');
+    }
+
+    disableButton();
+
+    fetch(config.apiBack + config.register, {
+        // method: 'post',
+        // body: JSON.stringify({
+        //     inputLogin,
+        //     inputEmail,
+        //     inputPassword,
+        //     radioStyleNinja,
+        //     radioCharacter,
+        //     radioVillage,
+        //     selectServer
+        // })
+    })
+        .then(response => {
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                document.getElementById('form-register').reset();
+                notificationSuccess(data.success.message);
+            }
+
+            if (data.error) {
+                notificationError(data.error.message);
+            }
+
+            enableButton();
+        })
+        .catch(error => {
+            enableButton();
+            notificationError(error.message);
+        });
+}
+
+const disableButton = () => {
+    const submit = document.querySelector('#form-register input[type="submit"]');
+    submit.value = 'AGUARDE';
+    submit.setAttribute('disabled', true);
+}
+
+const enableButton = () => {
+    const submit = document.querySelector('#form-register input[type="submit"]');
+    submit.value = 'CADASTRAR';
+    submit.removeAttribute('disabled');
 }
