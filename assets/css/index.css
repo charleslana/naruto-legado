@@ -177,3 +177,24 @@ ul span img {
 .c-orange {
     color: orange;
 }
+
+.icon-shuriken:before {
+    background-image: url(../img/icons/shuriken.png);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    display: inline-block;
+    width: 25px; 
+    height: 25px;
+    vertical-align: middle;
+    content:"";
+}
+
+.menu ul li a {
+    color: rgb(150, 150, 150);
+    text-decoration: underline;
+}
+
+.menu ul li a:hover {
+    color: rgb(150, 150, 150);
+    text-decoration: none;
+}
