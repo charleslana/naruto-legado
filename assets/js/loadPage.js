@@ -7,8 +7,17 @@ import addEvent from './addEvent.js';
 const main = document.querySelector('main');
 
 const loadPage = (page = 'home') => {
-    preloader();
 
+    if (page === 'home' || page === 'login' || page === 'register') {
+        return loadPageNotLogged(page);
+    }
+
+    loadPageLogged(page);
+}
+
+const loadPageNotLogged = (page) => {
+    preloaderMain();
+    
     fetch(`${config.apiFront}/pages/${page}.html`)
         .then(response => {
             if (!response.ok) {
@@ -28,7 +37,7 @@ const loadPage = (page = 'home') => {
         });
 }
 
-const preloader = () => {
+const preloaderMain = () => {
     main.innerHTML = `
     <div class="preloader-wrapper big active">
         <div class="spinner-layer spinner-blue-only">
@@ -61,6 +70,11 @@ const notFound = () => {
         </div>
     </div>
     `;
+}
+
+const loadPageLogged = (page) => {
+    const elements = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elements);
 }
 
 export default loadPage;
