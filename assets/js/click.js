@@ -1,4 +1,6 @@
-const click = (loadPage) => {
+import { recreateNode } from './functions.js';
+
+const click = (loadPageMain) => {
     removeAllClick();
     const clickActions = [].slice.call(document.querySelectorAll('.click-action'));
     clickActions.map((clickAction) => {
@@ -8,7 +10,7 @@ const click = (loadPage) => {
             let pageNow = document.querySelector('main');
             let getAttributePageNow = pageNow.getAttribute('page-now');
             if (page !== getAttributePageNow) {
-                loadPage(page);
+                loadPageMain(page);
             }
         });
     });
@@ -19,17 +21,6 @@ const removeAllClick = () => {
     clickActions.map((clickAction) => {
         recreateNode(clickAction);
     });
-}
-
-const recreateNode = (element, withChildren) => {
-    if (withChildren) {
-        element.parentNode.replaceChild(element.cloneNode(true), element);
-    }
-    else {
-        var newElement = element.cloneNode(false);
-        while (element.hasChildNodes()) newElement.appendChild(element.firstChild);
-        element.parentNode.replaceChild(newElement, element);
-    }
 }
 
 export default click;

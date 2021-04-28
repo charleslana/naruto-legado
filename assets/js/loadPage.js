@@ -10,10 +10,10 @@ import tooltip from './tooltip.js';
 const loadPage = (page = 'home') => {
 
     if (page === 'home' || page === 'login' || page === 'register') {
-        return loadPageMain(page);
+        return loadSectorPage('index', page);
     }
 
-    loadPageLogged(page);
+    loadSectorPage('logged', page);
 }
 
 const loadPageMain = (page) => {
@@ -32,7 +32,7 @@ const loadPageMain = (page) => {
             main.setAttribute('page-now', page);
             click(loadPageMain);
             fetchPageContent(page);
-            addEvent();
+            addEvent(loadPage);
         })
         .catch(error => {
             console.error(error.message);
@@ -80,11 +80,11 @@ const notFound = () => {
     `;
 }
 
-const loadPageLogged = (page) => {
+const loadSectorPage = (sectorPage, page) => {
     preloaderSector();
     const sector = document.querySelector('sector');
 
-    fetch(`${config.apiFront}/logged.html`)
+    fetch(`${config.apiFront}/${sectorPage}.html`)
         .then(response => {
             if (!response.ok) {
                 return sector.innerHTML = notFound();
