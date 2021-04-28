@@ -1,4 +1,5 @@
 import { recreateNode } from './functions.js';
+import { closeSidenav } from './sidenav.js';
 
 const logout = (loadPage) => {
     removeAllClick();
@@ -6,6 +7,7 @@ const logout = (loadPage) => {
     clickActions.map((clickAction) => {
         clickAction.addEventListener('click', function (event) {
             event.preventDefault();
+            closeSidenav();
             loadPage('login');
         });
     });

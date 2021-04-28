@@ -1,4 +1,4 @@
-const sidenav = () => {
+export const sidenav = () => {
     sidenavDetails();
     sidenavMenu();
     sidenavChat();
@@ -25,4 +25,12 @@ const sidenavChat = () => {
     });
 }
 
-export default sidenav;
+export const closeSidenav = () => {
+    const elementsDetails = document.querySelector('.sidenav-details');
+    const instanceDetails = M.Sidenav.init(elementsDetails);
+    instanceDetails.close();
+
+    const elementsMenu = document.querySelector('.sidenav-menu');
+    const instanceMenu = M.Sidenav.init(elementsMenu);
+    instanceMenu.close();
+}

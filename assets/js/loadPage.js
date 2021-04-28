@@ -3,17 +3,17 @@ import click from './click.js';
 import ninjasOnline from './ninjasOnline.js';
 import eventsActive from './eventsActive.js';
 import addEvent from './addEvent.js';
-import sidenav from './sidenav.js';
+import { sidenav } from './sidenav.js';
 import tab from './tab.js';
 import tooltip from './tooltip.js';
 
 const loadPage = (page = 'home') => {
 
     if (page === 'home' || page === 'login' || page === 'register') {
-        return loadSectorPage('index', page);
+        return loadPageSector('not-logged', page);
     }
 
-    loadSectorPage('logged', page);
+    loadPageSector('logged', page);
 }
 
 const loadPageMain = (page) => {
@@ -80,7 +80,7 @@ const notFound = () => {
     `;
 }
 
-const loadSectorPage = (sectorPage, page) => {
+const loadPageSector = (sectorPage, page) => {
     preloaderSector();
     const sector = document.querySelector('sector');
 
