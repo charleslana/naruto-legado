@@ -8,9 +8,9 @@ const main = document.querySelector('main');
 
 const loadPage = (page = 'home') => {
 
-    if (page === 'home' || page === 'login' || page === 'register') {
-        return loadPageNotLogged(page);
-    }
+    // if (page === 'home' || page === 'login' || page === 'register') {
+    //     return loadPageNotLogged(page);
+    // }
 
     loadPageLogged(page);
 }

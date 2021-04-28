@@ -1,5 +1,6 @@
 import config from './config.js';
 import { notificationError } from './notification.js';
+import loadPage from './loadPage.js';
 
 const login = () => {
     const buttonLogin = document.getElementById('form-login');
@@ -35,7 +36,7 @@ const doLogin = () => {
         })
         .then(data => {
             if (data.success) {
-                alert('redirect');
+                loadPage('news');
             }
 
             if (data.error) {

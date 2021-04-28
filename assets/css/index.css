@@ -109,3 +109,24 @@ ul span img {
     height: 20px;
     vertical-align: middle;
 }
+
+.col-padding-img {
+    padding-top: 25px;
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.table-black > thead > tr > th,
+.table-black > tbody > tr > td {
+    background-color: rgb(21, 20, 20);
+}
+
+.f-14 {
+    font-size: 14px;
+}
+
+.f-12 {
+    font-size: 12px;
+}
