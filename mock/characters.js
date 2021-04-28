@@ -388,7 +388,7 @@ const characters = [
         name: 'Zetsu',
         image: 1,
         value: 78
-    },
+    }
 ];
 
 export default characters;

@@ -1,10 +1,12 @@
 import login from './login.js';
-import {carousel, listCharacters} from './carousel.js';
+import carousel from './carousel.js';
+import { listCharacters, listVillages } from './register.js';
 
-const addSubmit = () => {
+const addEvent = () => {
     login();
     listCharacters();
     carousel();
+    listVillages();
 }
 
-export default addSubmit;
+export default addEvent;

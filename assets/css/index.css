@@ -88,3 +88,7 @@ footer {
     margin-right: auto;
     padding-top: 0.1px !important;
 }
+
+.col-padding {
+    padding: 20px !important;
+}
