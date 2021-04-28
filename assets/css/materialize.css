@@ -85,3 +85,15 @@ hr {
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+[type="radio"]:checked + span:after, [type="radio"].with-gap:checked + span:after {
+    background-color: orange !important;
+}
+
+[type="radio"]:not(:checked) + span:before, [type="radio"]:not(:checked) + span:after {
+    border: 2px solid white !important;
+}
+
+[type="radio"]:checked + span:before, [type="radio"]:checked + span:after {
+    border: 2px solid white !important;
+}
