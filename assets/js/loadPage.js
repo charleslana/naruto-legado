@@ -73,8 +73,10 @@ const notFound = () => {
 }
 
 const loadPageLogged = (page) => {
-    const elements = document.querySelectorAll('.sidenav');
-    M.Sidenav.init(elements);
+    const elements = document.querySelector('.sidenav-details');
+    M.Sidenav.init(elements, {
+        edge: 'right'
+    });
 }
 
 export default loadPage;
