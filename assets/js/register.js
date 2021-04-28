@@ -2,6 +2,7 @@ import characters from '../../mock/characters.js';
 import villages from '../../mock/villages.js';
 import config from './config.js';
 import { notificationError, notificationSuccess } from './notification.js';
+import loadPage from './loadPage.js';
 
 export const listCharacters = () => {
     const registerCharacters = document.getElementById('characters');
@@ -87,6 +88,7 @@ const signUp = () => {
         .then(data => {
             if (data.success) {
                 document.getElementById('form-register').reset();
+                loadPage('login');
                 notificationSuccess(data.success.message);
             }
 
