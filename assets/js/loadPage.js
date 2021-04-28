@@ -67,8 +67,14 @@ const notFound = () => {
     <div class="container">
         <div class="content">
             <h3 class="center">Pagina inválida</h3>
-            <img src="../assets/img/help/1.png" alt="Help" class="left" height="320" />
-            <p>A página solicitada não existe, por favor tente novamente voltando para a página inicial</p>
+            <div class="row">
+                <div class="col s12 m3">
+                    <img src="assets/img/help/1.png" alt="Help" class="responsive-img" />
+                </div>
+                <div class="col s12 m9">
+                    <p>A página solicitada não existe, por favor tente novamente voltando para a página inicial</p>
+                </div>
+            </div>
         </div>
     </div>
     `;
