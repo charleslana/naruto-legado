@@ -40,10 +40,9 @@ const doLogin = () => {
             }
 
             if (data.error) {
+                enableButton();
                 notificationError(data.error.message);
             }
-
-            enableButton();
         })
         .catch(error => {
             enableButton();

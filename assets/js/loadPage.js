@@ -7,20 +7,19 @@ import sidenav from './sidenav.js';
 import tab from './tab.js';
 import tooltip from './tooltip.js';
 
-const main = document.querySelector('main');
-
 const loadPage = (page = 'home') => {
 
-    // if (page === 'home' || page === 'login' || page === 'register') {
-    //     return loadPageNotLogged(page);
-    // }
+    if (page === 'home' || page === 'login' || page === 'register') {
+        return loadPageMain(page);
+    }
 
     loadPageLogged(page);
 }
 
-const loadPageNotLogged = (page) => {
+const loadPageMain = (page) => {
     preloaderMain();
-    
+    const main = document.querySelector('main');
+
     fetch(`${config.apiFront}/pages/${page}.html`)
         .then(response => {
             if (!response.ok) {
@@ -31,7 +30,7 @@ const loadPageNotLogged = (page) => {
         .then(data => {
             main.innerHTML = data;
             main.setAttribute('page-now', page);
-            click(loadPage);
+            click(loadPageMain);
             fetchPageContent(page);
             addEvent();
         })
@@ -41,7 +40,7 @@ const loadPageNotLogged = (page) => {
 }
 
 const preloaderMain = () => {
-    main.innerHTML = `
+    document.querySelector('main').innerHTML = `
     <div class="preloader-wrapper big active">
         <div class="spinner-layer spinner-blue-only">
             <div class="circle-clipper left">
@@ -76,9 +75,43 @@ const notFound = () => {
 }
 
 const loadPageLogged = (page) => {
-    sidenav();
-    tab();
-    tooltip();
+    preloaderSector();
+    const sector = document.querySelector('sector');
+
+    fetch(`${config.apiFront}/logged.html`)
+        .then(response => {
+            if (!response.ok) {
+                return sector.innerHTML = notFound();
+            }
+            return response.text();
+        })
+        .then(data => {
+            sector.innerHTML = data;
+            click(loadPageMain);
+            sidenav();
+            tab();
+            tooltip();
+            loadPageMain(page);
+        })
+        .catch(error => {
+            console.error(error.message);
+        });
+}
+
+const preloaderSector = () => {
+    document.querySelector('sector').innerHTML = `
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div><div class="gap-patch">
+                <div class="circle"></div>
+            </div><div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+    `;
 }
 
 export default loadPage;
