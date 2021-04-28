@@ -97,3 +97,44 @@ hr {
 [type="radio"]:checked + span:before, [type="radio"]:checked + span:after {
     border: 2px solid white !important;
 }
+
+.tabs {
+    background-color: transparent !important;
+}
+
+.tabs .tab a {
+    color: white !important;
+    text-decoration: none !important;
+    text-overflow: unset !important;
+    text-transform: none !important;
+    padding: 0 5px !important;
+}
+
+.tabs .tab a:hover {
+    background-color: orange !important;
+    color: white !important;
+}
+
+.tabs .tab a.active {
+    background-color: rgba(149, 90, 30, 0.8) !important;
+    color: white !important;
+}
+
+.tabs .indicator {
+    background-color: rgba(49, 35, 21, 0.8) !important;
+}
+
+.tooltipped {
+    border-bottom: 1px dotted rgb(159 37 37);
+}
+
+.tooltipped::before {
+    border-bottom: 2px dotted rgb(159 37 37);
+}
+
+.material-tooltip {
+    max-width: 300px;
+    background-color: rgb(21, 20, 20);
+    font-size: 18px;
+    border-radius: 6px;
+}

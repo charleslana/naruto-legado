@@ -3,6 +3,9 @@ import click from './click.js';
 import ninjasOnline from './ninjasOnline.js';
 import eventsActive from './eventsActive.js';
 import addEvent from './addEvent.js';
+import sidenav from './sidenav.js';
+import tab from './tab.js';
+import tooltip from './tooltip.js';
 
 const main = document.querySelector('main');
 
@@ -73,10 +76,9 @@ const notFound = () => {
 }
 
 const loadPageLogged = (page) => {
-    const elements = document.querySelector('.sidenav-details');
-    M.Sidenav.init(elements, {
-        edge: 'right'
-    });
+    sidenav();
+    tab();
+    tooltip();
 }
 
 export default loadPage;

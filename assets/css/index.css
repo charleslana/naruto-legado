@@ -139,3 +139,41 @@ ul span img {
     line-height: 48px;
     padding: 0 32px;
 }
+
+.log {
+    background-color: rgb(48, 8, 8);
+    overflow-y: scroll;
+    padding: 10px;
+    margin-left: 1%;
+    margin-top: 5%;
+    border: 3px solid black;
+    border-radius: 10px;
+    color: rgb(213, 210, 210);
+    min-height: 300px;
+    max-height: 500px;
+}
+
+.log li {
+    padding: 5px 10px;
+    text-shadow: 2px 2px black;
+}
+
+.log-f-server {
+    color: rgb(99, 181, 152);
+}
+
+.log-f-user {
+    color: rgb(234, 158, 112);
+}
+
+.log-f-received {
+    color: rgb(198, 225, 232);
+}
+
+#test1 input {
+    color: white !important;
+}
+
+.c-orange {
+    color: orange;
+}
