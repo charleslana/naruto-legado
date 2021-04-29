@@ -222,3 +222,11 @@ ul span img {
     margin-left: 5px;
     content:"";
 }
+
+.nav-menu .tooltipped {
+    display: inline-block;
+}
+
+.nav-menu .tooltipped:after {
+    width: 30px;
+}

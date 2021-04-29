@@ -25,13 +25,15 @@ export const navMenu = () => {
     const print = `
         <img src="assets/img/avatar/Boruto/1.png" alt="Boruto" class="col-padding-img responsive-img" />
         <h6 class="c-orange">Equipados/Ativos</h6>
-        <img src="assets/img/items/kawarimi.png" alt="Kawarimi" width="30px" height="30px" class="tooltipped"
+        <div class="tooltipped"
             data-position="bottom" data-tooltip="
             <p>Kawarimi no Jutsu</p>
             <p>Ao usar esse item você ficará imune a ataques normais por 12 horas</p>
             <p>Ativado</p>
             <p>Expira em: 2021-05-03 07:19:27</p>
-            " />
+            ">
+            <img src="assets/img/items/kawarimi.png" alt="Kawarimi" width="30px" height="30px" />
+        </div>
         <h5 class="c-orange icon-shuriken">Perfil</h5>
         <ul>
             <li><a href="/news" class="click-action">News</a></li>
