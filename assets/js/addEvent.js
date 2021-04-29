@@ -17,6 +17,14 @@ export const addEvent = (loadPage) => {
     logout(loadPage);
 
     modalDailyReward();
+
+    //remove
+    const goToPage = document.getElementById('go-to-page');
+    if (goToPage) {
+        goToPage.addEventListener('click', () => {
+            loadPage('config');
+        });
+    }
 }
 
 export const preEvent = () => {
