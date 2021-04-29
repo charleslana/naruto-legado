@@ -37,7 +37,7 @@ export const navMenu = () => {
         <h5 class="c-orange icon-shuriken">Perfil</h5>
         <ul>
             <li><a href="/news" class="click-action">News</a></li>
-            <li><a href="/config" class="click-action">Configurações</a></li>
+            <li><a href="/settings" class="click-action">Configurações</a></li>
             <li><a href="#" class="click-action">Status</a></li>
             <li><a href="#" class="click-action">Ficha ninja</a></li>
             <li><a href="#" class="click-action">Mochila</a></li>
