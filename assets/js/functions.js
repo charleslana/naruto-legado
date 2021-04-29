@@ -8,3 +8,7 @@ export const recreateNode = (element, withChildren) => {
         element.parentNode.replaceChild(newElement, element);
     }
 }
+
+export const randomString = () => {
+    return Math.random().toString(36).substring(2);
+}

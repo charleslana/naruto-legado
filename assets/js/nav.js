@@ -1,3 +1,5 @@
+import { randomString } from './functions.js';
+
 export const navDetails = () => {
     const print = `
         <li><span>teste1</span></li>
@@ -121,18 +123,36 @@ export const navMenu = () => {
 }
 
 export const navChat = () => {
-    const print = `
+    let printFirst = printChat();
+    let searchNavFirst = document.querySelectorAll('.nav-chat')[0];
+    if (searchNavFirst) {
+        searchNavFirst.innerHTML = printFirst;
+    }
+
+    let printSecond = printChat();
+    let searchNavSecond = document.querySelectorAll('.nav-chat')[1];
+    if (searchNavSecond) {
+        searchNavSecond.innerHTML = printSecond;
+    }
+}
+
+const printChat = () => {
+    const generalFirst = randomString();
+    const clanFirst = randomString();
+    const villageFirst = randomString();
+    const rulesFirst = randomString();
+    return `
         <h6>Chat</h6>
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#test1">Geral</a></li>
-                    <li class="tab col s3"><a href="#test2">Clã</a></li>
-                    <li class="tab col s3"><a href="#test3">Vila</a></li>
-                    <li class="tab col s3"><a href="#test4">Regras</a></li>
+                    <li class="tab col s3"><a class="active" href="#${generalFirst}">Geral</a></li>
+                    <li class="tab col s3"><a href="#${clanFirst}">Clã</a></li>
+                    <li class="tab col s3"><a href="#${villageFirst}">Vila</a></li>
+                    <li class="tab col s3"><a href="#${rulesFirst}">Regras</a></li>
                 </ul>
             </div>
-            <div id="test1" class="col s12">
+            <div id="${generalFirst}" class="col s12">
                 <div class="container">
                     <ul class="log">
                         <li class="log-f-server ">Equipe_NL: Kakuzo derrotou o boss no servidor 1</li>
@@ -144,15 +164,9 @@ export const navChat = () => {
                     <button type="button" class="btn">Enviar</button>
                 </div>
             </div>
-            <div id="test2" class="col s12">Test 2</div>
-            <div id="test3" class="col s12">Test 3</div>
-            <div id="test4" class="col s12">Test 4</div>
+            <div id="${clanFirst}" class="col s12">Test 2</div>
+            <div id="${villageFirst}" class="col s12">Test 3</div>
+            <div id="${rulesFirst}" class="col s12">Test 4</div>
         </div>         
     `;
-    const searchNav = [].slice.call(document.querySelectorAll('.nav-chat'));
-    if (searchNav) {
-        searchNav.map((nav) => {
-            nav.innerHTML = print;
-        });
-    }
 }

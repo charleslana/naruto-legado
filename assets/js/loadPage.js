@@ -31,6 +31,8 @@ const loadPageMain = (page) => {
             main.innerHTML = data;
             main.setAttribute('page-now', page);
             preEvent();
+            tab();
+            tooltip();
             click(loadPageMain);
             fetchPageContent(page);
             addEvent(loadPage);
@@ -96,8 +98,6 @@ const loadPageSector = (sectorPage, page) => {
             sector.innerHTML = data;
             click(loadPageMain);
             sidenav();
-            tab();
-            tooltip();
             loadPageMain(page);
         })
         .catch(error => {
