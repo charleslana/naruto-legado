@@ -270,3 +270,7 @@ h4 img {
     right: 30px;
     z-index: 99;
 }
+
+.c-pointer {
+    cursor: pointer;
+}

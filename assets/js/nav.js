@@ -2,15 +2,15 @@ import { randomString } from './functions.js';
 
 export const navDetails = () => {
     const print = `
-        <li><span>teste1</span></li>
-        <li><span>Level: 1</span></li>
-        <li><span><img src="assets/img/icons/xp.png" alt="Experience" />: 1/100</span></li>
-        <li><span><img src="assets/img/icons/hp.png" alt="Life" />: 100/100</span></li>
-        <li><span><img src="assets/img/icons/chakra.png" alt="Chakra" />: 100/100</span></li>
-        <li><span><img src="assets/img/icons/ying.png" alt="Ying" />: 30/30</span></li>
-        <li><span><img src="assets/img/icons/yang.png" alt="Yang" />: 29/30</span></li>
-        <li><span><img src="assets/img/icons/yens.png" alt="Yens" />: 0,00</span></li>
-        <li><span><img src="assets/img/icons/credits.png" alt="Credits" />: 0</span></li>
+        <li><span class="details-name">teste1</span></li>
+        <li><span class="details-level">Level: 1</span></li>
+        <li><span class="details-experience"><img src="assets/img/icons/xp.png" alt="Experience" />: 1/100</span></li>
+        <li><span class="details-life"><img src="assets/img/icons/hp.png" alt="Life" />: 100/100</span></li>
+        <li><span class="details-chakra"><img src="assets/img/icons/chakra.png" alt="Chakra" />: 100/100</span></li>
+        <li><span class="details-ying"><img src="assets/img/icons/ying.png" alt="Ying" />: 30/30</span></li>
+        <li><span class="details-yang"><img src="assets/img/icons/yang.png" alt="Yang" />: 29/30</span></li>
+        <li><span class="details-yens"><img src="assets/img/icons/yens.png" alt="Yens" />: 0,00</span></li>
+        <li><span class="details-credits"><img src="assets/img/icons/credits.png" alt="Credits" />: 0</span></li>
         <li><a href="/logout" class="click-logout">Sair</a></li>    
     `;
     const searchNav = [].slice.call(document.querySelectorAll('.nav-details'));
@@ -23,7 +23,7 @@ export const navDetails = () => {
 
 export const navMenu = () => {
     const print = `
-        <img src="assets/img/avatar/Boruto/1.png" alt="Boruto" class="col-padding-img responsive-img" />
+        <img src="assets/img/avatar/Boruto/1.png" alt="Avatar" class="col-padding-img responsive-img menu-avatar" />
         <h6 class="c-orange">Equipados/Ativos</h6>
         <div class="tooltipped"
             data-position="bottom" data-tooltip="

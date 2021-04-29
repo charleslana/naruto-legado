@@ -167,3 +167,7 @@ hr {
     background-color: black;
     text-align: center;
 }
+
+.carousel .carousel-item > img {
+    width: auto;
+}

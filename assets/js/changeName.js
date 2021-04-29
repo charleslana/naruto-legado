@@ -1,6 +1,6 @@
 import { confirmDialog } from './notification.js';
 
-const addSubmit = () => {
+const addChangeNameSubmit = () => {
     const submit = document.getElementById('form-change-name');
     if (submit) {
         submit.addEventListener('submit', (event) => {
@@ -18,4 +18,4 @@ const changeName = async () => {
     }
 }
 
-export default addSubmit;
+export default addChangeNameSubmit;

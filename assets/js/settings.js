@@ -1,7 +1,10 @@
-import addSubmit from './changeName.js';
+import addChangeNameSubmit from './changeName.js';
+import { showAvatar } from './changeAvatar.js';
 
 const settings = () => {
-    addSubmit();
+    addChangeNameSubmit();
+
+    showAvatar();
 }
 
 export default settings;

@@ -1,5 +1,24 @@
 {
     "success": {
         "message": "Credenciais inválidas."
+    },
+    "user": {
+        "name": "teste",
+        "level": "1",
+        "minExperience": "0",
+        "maxExperience": "100",
+        "minLife": "100",
+        "maxLife": "100",
+        "minChakra": "100",
+        "maxChakra": "100",
+        "minYing": "30",
+        "maxYing": "30",
+        "minYang": "30",
+        "maxYang": "30",
+        "yens": "2240000",
+        "credits": "1200",
+        "avatarName": "Naruto",
+        "avatarImage": "5",
+        "premium": true
     }
 }

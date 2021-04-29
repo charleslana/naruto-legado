@@ -1,4 +1,4 @@
-import { login, showLogin } from './login.js';
+import { login, showLogin, showDataLogin } from './login.js';
 import carousel from './carousel.js';
 import { listCharacters, listVillages, register } from './register.js';
 import logout from './logout.js';
@@ -15,6 +15,7 @@ export const addEvent = (loadPage) => {
     listVillages();
     register();
 
+    showDataLogin();
     logout(loadPage);
 
     modalDailyReward();

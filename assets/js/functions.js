@@ -12,3 +12,11 @@ export const recreateNode = (element, withChildren) => {
 export const randomString = () => {
     return Math.random().toString(36).substring(2);
 }
+
+export const formatYens = (value) => {
+    return parseFloat(value).toFixed(2).replace('.', ',').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+}
+
+export const formatCredits = (value) => {
+    return value.replace('.', ',').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.');
+}
