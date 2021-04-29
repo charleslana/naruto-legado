@@ -257,3 +257,8 @@ ul span img {
     color: white !important;
     text-transform: none !important;
 }
+
+h4 img {
+    vertical-align: middle;
+    width: 40px;
+}
