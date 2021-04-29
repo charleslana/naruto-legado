@@ -2,7 +2,7 @@ import config from './config.js';
 import click from './click.js';
 import ninjasOnline from './ninjasOnline.js';
 import eventsActive from './eventsActive.js';
-import addEvent from './addEvent.js';
+import { addEvent, preEvent } from './addEvent.js';
 import { sidenav } from './sidenav.js';
 import tab from './tab.js';
 import tooltip from './tooltip.js';
@@ -30,6 +30,7 @@ const loadPageMain = (page) => {
         .then(data => {
             main.innerHTML = data;
             main.setAttribute('page-now', page);
+            preEvent();
             click(loadPageMain);
             fetchPageContent(page);
             addEvent(loadPage);

@@ -2,8 +2,9 @@ import { login, showLogin } from './login.js';
 import carousel from './carousel.js';
 import { listCharacters, listVillages, register } from './register.js';
 import logout from './logout.js';
+import { navDetails, navMenu, navChat } from './nav.js';
 
-const addEvent = (loadPage) => {
+export const addEvent = (loadPage) => {
     login();
     showLogin();
 
@@ -15,4 +16,8 @@ const addEvent = (loadPage) => {
     logout(loadPage);
 }
 
-export default addEvent;
+export const preEvent = () => {
+    navDetails();
+    navMenu();
+    navChat();
+}
