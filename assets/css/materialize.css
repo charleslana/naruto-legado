@@ -61,6 +61,11 @@ textarea.materialize-textarea:focus:not([readonly])+label {
     color: orange;
 }
 
+[type="checkbox"]:checked+span:not(.lever):before {
+    border-right: 2px solid orange !important;
+    border-bottom: 2px solid orange !important;
+}
+
 .btn {
     margin: 2%;
     background-color: rgb(72, 41, 10);

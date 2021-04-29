@@ -2,7 +2,7 @@ import config from './config.js';
 import { notificationError } from './notification.js';
 import loadPage from './loadPage.js';
 
-const login = () => {
+export const login = () => {
     const buttonLogin = document.getElementById('form-login');
     if (buttonLogin) {
         buttonLogin.addEventListener('submit', function (event) {
@@ -36,6 +36,7 @@ const doLogin = () => {
         })
         .then(data => {
             if (data.success) {
+                saveLogin(inputLogin, inputPassword, selectServer);
                 loadPage('news');
             }
 
@@ -62,4 +63,30 @@ const enableButton = () => {
     submit.removeAttribute('disabled');
 }
 
-export default login;
+const saveLogin = (inputLogin, inputPassword, selectServer) => {
+    if (document.getElementById('save-login').checked) {
+        localStorage.setItem('login', inputLogin);
+        localStorage.setItem('password', inputPassword);
+        localStorage.setItem('server', selectServer);
+        return;
+    }
+    localStorage.removeItem('login');
+    localStorage.removeItem('password');
+    localStorage.removeItem('server');
+}
+
+export const showLogin = () => {
+    const checkLogin = document.getElementById('save-login');
+    if (checkLogin) {
+        const storageLogin = localStorage.getItem('login');
+        const storagePassword = localStorage.getItem('password');
+        const storageServer = localStorage.getItem('server');
+        if (storageLogin) {
+            document.getElementById('login').value = storageLogin;
+            document.getElementById('password').value = storagePassword;
+            document.getElementById('server').value = storageServer;
+            checkLogin.setAttribute('checked', true);
+            M.updateTextFields();
+        }
+    }
+}
