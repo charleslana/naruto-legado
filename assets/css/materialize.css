@@ -105,13 +105,14 @@ hr {
 
 .tabs {
     background-color: transparent !important;
+    border: 3px solid rgba(72, 41, 10);
+    border-radius: 10px;
 }
 
 .tabs .tab a {
-    color: white !important;
+    color: orange !important;
     text-decoration: none !important;
     text-overflow: unset !important;
-    text-transform: none !important;
     padding: 0 5px !important;
 }
 

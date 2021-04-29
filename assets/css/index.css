@@ -131,6 +131,10 @@ ul span img {
     font-size: 12px;
 }
 
+.f-40 {
+    font-size: 40px;
+}
+
 .sidenav li > span {
     display: block;
     font-size: 14px;
@@ -229,4 +233,19 @@ ul span img {
 
 .nav-menu .tooltipped:after {
     width: 30px;
+}
+
+.daily-completed {
+    background-color: rgb(72, 41, 10) !important;
+}
+
+.nav-chat .tabs {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+.nav-chat .tabs a {
+    color: white !important;
+    text-transform: none !important;
 }

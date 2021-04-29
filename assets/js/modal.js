@@ -1,6 +1,7 @@
 export const modalDailyReward = () => {
+    const enable = false;
     const elements = document.getElementById('modal-daily-reward');
-    if (elements) {
+    if (elements && enable) {
         const instance = M.Modal.init(elements, {
             endingTop: '13%'
         });
