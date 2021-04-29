@@ -6,31 +6,41 @@ export const sidenav = () => {
 
 const sidenavDetails = () => {
     const elements = document.querySelector('.sidenav-details');
-    M.Sidenav.init(elements, {
-        edge: 'right'
-    });
+    if (elements) {
+        M.Sidenav.init(elements, {
+            edge: 'right'
+        });
+    }
 }
 
 const sidenavMenu = () => {
     const elements = document.querySelector('.sidenav-menu');
-    M.Sidenav.init(elements, {
-        edge: 'left'
-    });
+    if (elements) {
+        M.Sidenav.init(elements, {
+            edge: 'left'
+        });
+    }
 }
 
 const sidenavChat = () => {
     const elements = document.querySelector('.sidenav-chat');
-    M.Sidenav.init(elements, {
-        edge: 'right'
-    });
+    if (elements) {
+        M.Sidenav.init(elements, {
+            edge: 'right'
+        });
+    }
 }
 
 export const closeSidenav = () => {
     const elementsDetails = document.querySelector('.sidenav-details');
-    const instanceDetails = M.Sidenav.init(elementsDetails);
-    instanceDetails.close();
+    if (elementsDetails) {
+        const instanceDetails = M.Sidenav.init(elementsDetails);
+        instanceDetails.close();
+    }
 
     const elementsMenu = document.querySelector('.sidenav-menu');
-    const instanceMenu = M.Sidenav.init(elementsMenu);
-    instanceMenu.close();
+    if (elementsMenu) {
+        const instanceMenu = M.Sidenav.init(elementsMenu);
+        instanceMenu.close();
+    }
 }

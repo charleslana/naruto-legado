@@ -3,6 +3,7 @@ import carousel from './carousel.js';
 import { listCharacters, listVillages, register } from './register.js';
 import logout from './logout.js';
 import { navDetails, navMenu, navChat } from './nav.js';
+import { modalDailyReward } from './modal.js';
 
 export const addEvent = (loadPage) => {
     login();
@@ -14,6 +15,8 @@ export const addEvent = (loadPage) => {
     register();
 
     logout(loadPage);
+
+    modalDailyReward();
 }
 
 export const preEvent = () => {
