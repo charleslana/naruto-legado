@@ -16,8 +16,8 @@ export const notificationSuccess = (message) => {
 
 export const confirmDialog = async (myFunction) => {
     return await Swal.fire({
-        title: 'Você confirma a ação?',
         icon: 'warning',
+        title: 'Você confirma a ação?',
         text: 'O processo pode ser irreversível.',
         showCancelButton: true,
         confirmButtonText: 'Confirmar',
