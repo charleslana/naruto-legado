@@ -13,7 +13,7 @@ export const login = () => {
 }
 
 const doLogin = () => {
-    const inputLogin = document.getElementById('login').value;
+    const inputEmail = document.getElementById('email').value;
     const inputPassword = document.getElementById('password').value;
     const selectServer = document.getElementById('server').value;
 
@@ -26,7 +26,7 @@ const doLogin = () => {
     fetch(config.apiBack + config.login, {
         // method: 'post',
         // body: JSON.stringify({
-        //     inputLogin,
+        //     inputEmail,
         //     inputPassword,
         //     selectServer
         // })
@@ -36,7 +36,7 @@ const doLogin = () => {
         })
         .then(data => {
             if (data.success) {
-                saveLogin(inputLogin, inputPassword, selectServer);
+                saveLogin(inputEmail, inputPassword, selectServer);
                 loadPage('news');
             }
 
@@ -63,14 +63,14 @@ const enableButton = () => {
     submit.removeAttribute('disabled');
 }
 
-const saveLogin = (inputLogin, inputPassword, selectServer) => {
+const saveLogin = (inputEmail, inputPassword, selectServer) => {
     if (document.getElementById('save-login').checked) {
-        localStorage.setItem('login', inputLogin);
+        localStorage.setItem('email', inputEmail);
         localStorage.setItem('password', inputPassword);
         localStorage.setItem('server', selectServer);
         return;
     }
-    localStorage.removeItem('login');
+    localStorage.removeItem('email');
     localStorage.removeItem('password');
     localStorage.removeItem('server');
 }
@@ -78,11 +78,11 @@ const saveLogin = (inputLogin, inputPassword, selectServer) => {
 export const showLogin = () => {
     const checkLogin = document.getElementById('save-login');
     if (checkLogin) {
-        const storageLogin = localStorage.getItem('login');
+        const storageEmail = localStorage.getItem('email');
         const storagePassword = localStorage.getItem('password');
         const storageServer = localStorage.getItem('server');
-        if (storageLogin) {
-            document.getElementById('login').value = storageLogin;
+        if (storageEmail) {
+            document.getElementById('email').value = storageEmail;
             document.getElementById('password').value = storagePassword;
             document.getElementById('server').value = storageServer;
             checkLogin.setAttribute('checked', true);

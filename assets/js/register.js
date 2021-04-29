@@ -52,7 +52,7 @@ export const register = () => {
 
 const signUp = () => {
     const selectServer = document.getElementById('server').value;
-    const inputLogin = document.getElementById('login').value;
+    const inputName = document.getElementById('name').value;
     const inputEmail = document.getElementById('email').value;
     const inputPassword = document.getElementById('password').value;
     const inputConfirmPassword = document.getElementById('confirmPassword').value;
@@ -73,7 +73,7 @@ const signUp = () => {
     fetch(config.apiBack + config.register, {
         // method: 'post',
         // body: JSON.stringify({
-        //     inputLogin,
+        //     inputName,
         //     inputEmail,
         //     inputPassword,
         //     radioStyleNinja,
@@ -93,10 +93,9 @@ const signUp = () => {
             }
 
             if (data.error) {
+                enableButton();
                 notificationError(data.error.message);
             }
-
-            enableButton();
         })
         .catch(error => {
             enableButton();
