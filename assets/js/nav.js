@@ -148,7 +148,7 @@ const printChat = () => {
         <div class="row">
             <div class="col s12">
                 <ul class="tabs">
-                    <li class="tab col s3"><a class="active" href="#${general}">Geral</a></li>
+                    <li class="tab col s3"><a class="active" href="#${general}">Geral •</a></li>
                     <li class="tab col s3"><a href="#${clan}">Clã</a></li>
                     <li class="tab col s3"><a href="#${village}">Vila</a></li>
                     <li class="tab col s3"><a href="#${rules}">Regras</a></li>

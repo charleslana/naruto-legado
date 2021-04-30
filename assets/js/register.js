@@ -1,5 +1,5 @@
-import characters from '../../mock/characters.js';
-import villages from '../../mock/villages.js';
+import characters from '../../static/characters.js';
+import villages from '../../static/villages.js';
 import config from './config.js';
 import { notificationError, notificationSuccess } from './notification.js';
 import loadPage from './loadPage.js';
@@ -29,7 +29,7 @@ export const listVillages = () => {
             labelVillages += `
                 <div class="col m3 col-padding">
                     <label>
-                        <img src="../assets//img/villages/${village.image}.png" alt="${village.name}" height="50px" />
+                        <img src="../assets//img/villages/${village.image}.png" alt="${village.name}" height="50px" class="c-pointer" />
                         <input class="with-gap" name="group3" type="radio" value="${village.value}" required />
                         <span>${village.name}</span>
                     </label>

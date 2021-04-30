@@ -1,8 +1,10 @@
+import { getStorage } from './storage.js';
+
 export const showAvatar = () => {
     const avatar = document.getElementById('change-avatar');
     if (avatar) {
-        const premium = localStorage.getItem('premium');
-        const avatarName = localStorage.getItem('avatarName');
+        const premium = getStorage('premium');
+        const avatarName = getStorage('avatarName');
         let values = [1, 2, 3];
         if (premium === 'true') {
             values = [1, 2, 3, 4, 5];

@@ -1,10 +1,11 @@
-import { login, showLogin, showDataLogin } from './login.js';
+import { login, showLogin } from './login.js';
 import carousel from './carousel.js';
 import { listCharacters, listVillages, register } from './register.js';
 import logout from './logout.js';
 import { navDetails, navMenu, navChat } from './nav.js';
 import { modalDailyReward } from './modal.js';
 import settings from './settings.js';
+import { showUserData } from './storage.js';
 
 export const addEvent = (loadPage) => {
     login();
@@ -15,7 +16,7 @@ export const addEvent = (loadPage) => {
     listVillages();
     register();
 
-    showDataLogin();
+    showUserData();
     logout(loadPage);
 
     modalDailyReward();

@@ -1,9 +1,10 @@
-import characters from '../../mock/characters.js';
+import characters from '../../static/characters.js';
+import { getStorage } from './storage.js';
 
 export const showCharacter = () => {
     const checkCharacter = document.getElementById('change-character');
     if (checkCharacter) {
-        const premium = localStorage.getItem('premium');
+        const premium = getStorage('premium');
         if (premium === 'true') {
             let print = '';
             characters.map(character => {

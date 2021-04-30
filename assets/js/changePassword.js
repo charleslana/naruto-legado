@@ -28,7 +28,7 @@ const changePassword = () => {
     disableButton();
 
     fetch(config.apiBack + config.changePassword, {
-        // method: 'put',
+        // method: 'patch',
         // body: JSON.stringify({
         //     currentPassword,
         //     newPassword
