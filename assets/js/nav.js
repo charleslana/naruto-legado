@@ -45,7 +45,7 @@ export const navMenu = () => {
             <li><a href="#" class="click-action">Animal lendário</a></li>
             <li><a href="#" class="click-action">Meus jutsus</a></li>
             <li><a href="#" class="click-action">Ordem dos jutsus</a></li>
-            <li><a href="#" class="click-action">Mensagens</a></li>
+            <li><a href="#" class="click-action">Mensagens (3)</a></li>
         </ul>
         <div class="divider"></div>
         <h5 class="c-orange icon-shuriken">Clã</h5>
