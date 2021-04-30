@@ -4,7 +4,7 @@ export const showAvatar = () => {
         const premium = localStorage.getItem('premium');
         const avatarName = localStorage.getItem('avatarName');
         let values = [1, 2, 3];
-        if (premium) {
+        if (premium === 'true') {
             values = [1, 2, 3, 4, 5];
         }
         let print = '';

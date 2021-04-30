@@ -1,4 +1,5 @@
 import { recreateNode } from './functions.js';
+import { closeSidenav } from './sidenav.js';
 
 const click = (loadPageMain) => {
     removeAllClick();
@@ -10,6 +11,7 @@ const click = (loadPageMain) => {
             let pageNow = document.querySelector('main');
             let getAttributePageNow = pageNow.getAttribute('page-now');
             if (page !== getAttributePageNow) {
+                closeSidenav();
                 loadPageMain(page);
             }
         });

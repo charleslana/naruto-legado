@@ -10,11 +10,11 @@ export const listCharacters = () => {
         let labelCharacters = '';
         characters.map(character => {
             labelCharacters += `
-            <label class="carousel-item">
-                <img src="../assets/img/avatar/${character.name}/${character.image}.png" alt="${character.name}" height="150px">
-                <input class="with-gap" name="group2" type="radio" value="${character.value}" required />
-                <span>${character.name}</span>
-            </label>       
+                <label class="carousel-item">
+                    <img src="../assets/img/avatar/${character.name}/${character.image}.png" alt="${character.name}" height="150px">
+                    <input class="with-gap" name="group2" type="radio" value="${character.value}" required />
+                    <span>${character.name}</span>
+                </label>       
             `;
         });
         registerCharacters.innerHTML = labelCharacters;
@@ -27,13 +27,13 @@ export const listVillages = () => {
         let labelVillages = '';
         villages.map(village => {
             labelVillages += `
-            <div class="col m3 col-padding">
-                <label>
-                    <img src="../assets//img/villages/${village.image}.png" alt="${village.name}" height="50px" />
-                    <input class="with-gap" name="group3" type="radio" value="${village.value}" required />
-                    <span>${village.name}</span>
-                </label>
-            </div>
+                <div class="col m3 col-padding">
+                    <label>
+                        <img src="../assets//img/villages/${village.image}.png" alt="${village.name}" height="50px" />
+                        <input class="with-gap" name="group3" type="radio" value="${village.value}" required />
+                        <span>${village.name}</span>
+                    </label>
+                </div>
             `;
         });
         registerVillages.innerHTML = labelVillages;
