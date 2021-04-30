@@ -61,25 +61,24 @@ const enableButton = () => {
 
 const saveLogin = (inputEmail, inputPassword) => {
     if (document.getElementById('save-login').checked) {
-        saveStorage('email', inputEmail);
-        saveStorage('password', inputPassword);
+        saveStorage('loginEmail', inputEmail);
+        saveStorage('loginPassword', inputPassword);
         return;
     }
-    removeStorage('email');
-    removeStorage('password');
+    removeStorage('loginEmail');
+    removeStorage('loginPassword');
 }
 
 export const showLogin = () => {
     const checkLogin = document.getElementById('save-login');
     if (checkLogin) {
-        const storageEmail = getStorage('email');
-        const storagePassword = getStorage('password');
+        const storageEmail = getStorage('loginEmail');
+        const storagePassword = getStorage('loginPassword');
 
         if (storageEmail) {
             document.getElementById('email').value = storageEmail;
             document.getElementById('password').value = storagePassword;
             checkLogin.setAttribute('checked', true);
-            M.updateTextFields();
         }
     }
 }

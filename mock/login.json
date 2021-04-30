@@ -3,6 +3,7 @@
         "message": "Credenciais inválidas."
     },
     "user": {
+        "email": "teste@teste.com",
         "name": "teste",
         "level": "1",
         "minExperience": "0",

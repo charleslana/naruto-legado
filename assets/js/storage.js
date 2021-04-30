@@ -13,6 +13,7 @@ export const removeStorage = (variable) => {
 }
 
 export const saveUserData = (data) => {
+    saveStorage('email', data.user.email);
     saveStorage('name', data.user.name);
     saveStorage('level', data.user.level);
     saveStorage('minExperience', data.user.minExperience);
@@ -33,6 +34,7 @@ export const saveUserData = (data) => {
 }
 
 export const removeUserData = () => {
+    removeStorage('email');
     removeStorage('name');
     removeStorage('level');
     removeStorage('minExperience');

@@ -23,6 +23,8 @@ export const addEvent = (loadPage) => {
 
     settings();
 
+    M.updateTextFields();
+
     //remove
     const goToPage = document.getElementById('go-to-page');
     if (goToPage) {
