@@ -190,6 +190,10 @@ ul span img {
     color: orange;
 }
 
+.c-red {
+    color: red;
+}
+
 .icon-shuriken:before {
     background-image: url(../img/icons/shuriken.png);
     background-repeat: no-repeat;
@@ -273,4 +277,10 @@ h4 img {
 
 .c-pointer {
     cursor: pointer;
+}
+
+textarea {
+    background-color: rgb(48, 8, 8) !important;
+    color: rgb(150, 150, 150) !important;
+    height: auto;
 }
