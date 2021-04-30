@@ -29,7 +29,7 @@ const changeName = () => {
     const newName = document.getElementById('newName').value;
 
     if (name === newName) {
-        return notificationError('O nome novo não deve ser a mesmo do atual.');
+        return notificationError('O nome novo não deve ser o mesmo do atual.');
     }
 
     if (credits < price.changeName) {
