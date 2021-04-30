@@ -16,6 +16,8 @@ export const saveUserData = (data) => {
     saveStorage('email', data.user.email);
     saveStorage('name', data.user.name);
     saveStorage('level', data.user.level);
+    saveStorage('styleNinja', data.user.styleNinja);
+    saveStorage('village', data.user.village);
     saveStorage('minExperience', data.user.minExperience);
     saveStorage('maxExperience', data.user.maxExperience);
     saveStorage('minLife', data.user.minLife);
@@ -37,6 +39,8 @@ export const removeUserData = () => {
     removeStorage('email');
     removeStorage('name');
     removeStorage('level');
+    removeStorage('styleNinja');
+    removeStorage('village');
     removeStorage('minExperience');
     removeStorage('maxExperience');
     removeStorage('minLife');

@@ -6,6 +6,8 @@
         "email": "teste@teste.com",
         "name": "teste",
         "level": "1",
+        "styleNinja": "2",
+        "village": "3",
         "minExperience": "0",
         "maxExperience": "100",
         "minLife": "100",
