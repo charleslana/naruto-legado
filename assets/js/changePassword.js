@@ -1,5 +1,6 @@
 import { notificationError } from './notification.js';
 import config from './config.js';
+import { toastSuccess } from './toast.js';
 
 const addChangePasswordSubmit = () => {
     const submit = document.getElementById('form-change-password');
@@ -39,7 +40,7 @@ const changePassword = () => {
         .then(data => {
             if (data.success) {
                 document.getElementById('form-change-password').reset();
-                alert();
+                toastSuccess(data.success.message);
             }
 
             if (data.error) {

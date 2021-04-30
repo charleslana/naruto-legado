@@ -284,3 +284,15 @@ textarea {
     color: rgb(150, 150, 150) !important;
     height: auto;
 }
+
+.toast-success {
+    background-color: #51a351;
+}
+
+.toast-error {
+    background-color: #bd362f;
+}
+
+.toast-warning {
+    background-color: #f89406;
+}
