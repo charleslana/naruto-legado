@@ -49,6 +49,7 @@ export const removeUserData = () => {
     removeStorage('credits');
     removeStorage('avatarName');
     removeStorage('avatarImage');
+    removeStorage('premium');
 }
 
 export const showUserData = () => {
