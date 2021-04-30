@@ -5,7 +5,7 @@ import { addChangeMural } from './mural.js';
 import { showSound } from './sound.js';
 import addChangePasswordSubmit from './changePassword.js';
 import { getStorage } from './storage.js';
-import { showStyleNinja } from './changeStyleNinja.js';
+import { showNinjaStyle, addChangeNinjaStyleSubmit } from './changeNinjaStyle.js';
 
 const settings = () => {
     showSound();
@@ -22,7 +22,8 @@ const settings = () => {
 
     myEmail();
 
-    showStyleNinja(getStorage);
+    showNinjaStyle();
+    addChangeNinjaStyleSubmit();
 }
 
 const myEmail = () => {
