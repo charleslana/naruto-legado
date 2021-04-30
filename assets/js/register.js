@@ -105,12 +105,12 @@ const signUp = () => {
 
 const disableButton = () => {
     const submit = document.querySelector('#form-register input[type="submit"]');
-    submit.value = 'AGUARDE';
+    submit.value = 'Aguarde';
     submit.setAttribute('disabled', true);
 }
 
 const enableButton = () => {
     const submit = document.querySelector('#form-register input[type="submit"]');
-    submit.value = 'CADASTRAR';
+    submit.value = 'Cadastrar';
     submit.removeAttribute('disabled');
 }
