@@ -16,11 +16,6 @@ export const login = () => {
 const doLogin = () => {
     const inputEmail = document.getElementById('email').value;
     const inputPassword = document.getElementById('password').value;
-    const selectServer = document.getElementById('server').value;
-
-    if (selectServer < 1) {
-        return notificationError('Por favor selecione o server.');
-    }
 
     disableButton();
 
@@ -28,8 +23,7 @@ const doLogin = () => {
         // method: 'post',
         // body: JSON.stringify({
         //     inputEmail,
-        //     inputPassword,
-        //     selectServer
+        //     inputPassword
         // })
     })
         .then(response => {
@@ -37,7 +31,7 @@ const doLogin = () => {
         })
         .then(data => {
             if (data.success) {
-                saveLogin(inputEmail, inputPassword, selectServer);
+                saveLogin(inputEmail, inputPassword);
                 saveUserData(data);
                 loadPage('news');
             }
@@ -65,16 +59,14 @@ const enableButton = () => {
     submit.removeAttribute('disabled');
 }
 
-const saveLogin = (inputEmail, inputPassword, selectServer) => {
+const saveLogin = (inputEmail, inputPassword) => {
     if (document.getElementById('save-login').checked) {
         saveStorage('email', inputEmail);
         saveStorage('password', inputPassword);
-        saveStorage('server', selectServer);
         return;
     }
     removeStorage('email');
     removeStorage('password');
-    removeStorage('server');
 }
 
 export const showLogin = () => {
@@ -82,12 +74,10 @@ export const showLogin = () => {
     if (checkLogin) {
         const storageEmail = getStorage('email');
         const storagePassword = getStorage('password');
-        const storageServer = getStorage('server');
 
         if (storageEmail) {
             document.getElementById('email').value = storageEmail;
             document.getElementById('password').value = storagePassword;
-            document.getElementById('server').value = storageServer;
             checkLogin.setAttribute('checked', true);
             M.updateTextFields();
         }

@@ -51,7 +51,6 @@ export const register = () => {
 }
 
 const signUp = () => {
-    const selectServer = document.getElementById('server').value;
     const inputName = document.getElementById('name').value;
     const inputEmail = document.getElementById('email').value;
     const inputPassword = document.getElementById('password').value;
@@ -59,10 +58,6 @@ const signUp = () => {
     const radioStyleNinja = document.querySelector('input[name="group1"]:checked').value;
     const radioCharacter = document.querySelector('input[name="group2"]:checked').value;
     const radioVillage = document.querySelector('input[name="group3"]:checked').value;
-
-    if (selectServer < 1) {
-        return notificationError('Por favor selecione um server.');
-    }
 
     if (inputPassword !== inputConfirmPassword) {
         return notificationError('As senhas digitadas não coincidem.');
@@ -78,8 +73,7 @@ const signUp = () => {
         //     inputPassword,
         //     radioStyleNinja,
         //     radioCharacter,
-        //     radioVillage,
-        //     selectServer
+        //     radioVillage
         // })
     })
         .then(response => {

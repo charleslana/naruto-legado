@@ -17,6 +17,8 @@ const settings = () => {
     showCharacter();
 
     addChangeMural();
+
+    M.updateTextFields();
 }
 
 export default settings;

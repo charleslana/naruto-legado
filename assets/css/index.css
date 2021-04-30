@@ -194,6 +194,10 @@ ul span img {
     color: red;
 }
 
+.c-white {
+    color: white !important;
+}
+
 .icon-shuriken:before {
     background-image: url(../img/icons/shuriken.png);
     background-repeat: no-repeat;
