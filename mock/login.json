@@ -24,6 +24,7 @@
         "avatarName": "Naruto",
         "avatarImage": "5",
         "premium": true,
-        "clan": false
+        "clan": false,
+        "mural": "[center][color=orange][b]Nenhuma informação no mural[/b][/color][/center]"
     }
 }

@@ -35,6 +35,7 @@ export const saveUserData = (data) => {
     saveStorage('avatarImage', data.user.avatarImage);
     saveStorage('premium', data.user.premium);
     saveStorage('clan', data.user.clan);
+    saveStorage('mural', data.user.mural);
 }
 
 export const removeUserData = () => {
@@ -60,6 +61,7 @@ export const removeUserData = () => {
     removeStorage('avatarImage');
     removeStorage('premium');
     removeStorage('clan');
+    removeStorage('mural');
 }
 
 export const showUserData = () => {

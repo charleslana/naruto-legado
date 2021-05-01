@@ -1,7 +1,7 @@
 import addChangeNameSubmit from './changeName.js';
 import { showAvatar, addChangeAvatarSubmit } from './changeAvatar.js';
 import { showCharacter, addChangeCharacterSubmit } from './changeCharacter.js';
-import { addChangeMural } from './mural.js';
+import { addChangeMuralSubmit, showMural } from './changeMural.js';
 import { showSound } from './sound.js';
 import addChangePasswordSubmit from './changePassword.js';
 import { getStorage } from './storage.js';
@@ -29,7 +29,8 @@ const settings = () => {
     showCharacter();
     addChangeCharacterSubmit();
 
-    addChangeMural();
+    addChangeMuralSubmit();
+    showMural();
 }
 
 const myEmail = () => {
