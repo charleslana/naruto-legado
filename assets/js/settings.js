@@ -1,5 +1,5 @@
 import addChangeNameSubmit from './changeName.js';
-import { showAvatar } from './changeAvatar.js';
+import { showAvatar, addChangeAvatarSubmit } from './changeAvatar.js';
 import { showCharacter } from './changeCharacter.js';
 import { addChangeMural } from './mural.js';
 import { showSound } from './sound.js';
@@ -15,12 +15,6 @@ const settings = () => {
 
     addChangeNameSubmit();
 
-    showAvatar();
-
-    showCharacter();
-
-    addChangeMural();
-
     myEmail();
 
     showNinjaStyle();
@@ -28,6 +22,13 @@ const settings = () => {
 
     showVillage();
     addChangeVillageSubmit();
+
+    showAvatar();
+    addChangeAvatarSubmit();
+
+    showCharacter();
+
+    addChangeMural();
 }
 
 const myEmail = () => {
