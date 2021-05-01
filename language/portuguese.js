@@ -1,4 +1,9 @@
 const translatePortuguese = {
+    "NOT_LOGGED_NAV_A": "Home",
+    "NOT_LOGGED_NAV_B": "Login",
+    "NOT_LOGGED_NAV_C": "Cadastrar-se",
+    "NOT_LOGGED_FOOTER": "Jogar Naruto Legado é totalmente gratuito e sem nenhum compromisso. Somos um fã site e os direitos autorais desta obra estão reservados ao criador da série japonesa. Todos os direitos sobre NARUTO são reservados a Masashi Kishimoto. Todo e qualquer lucro obtido neste site são usados na manutenção do site em despesas com servidores e programação do jogo.",
+    "NOT_LOGGED_FOOTER_COPY": "© 2021 Copyright - Todos direitos reservados a Naruto Legado by Charles fan made<br> © 2021 Copyright - Todos direitos do anime e imagens reservados a Masashi Kishimoto",
     "HOME_LINK": "Aqui",
     "HOME_WELCOME": "Bem vindo",
     "HOME_DETAILS_A": "Para jogar Naruto Legado você necessita somente de uma conexão com a Internet e um Navegador (Google Chrome, FireFox ou outro de sua preferência). Clique em Cadastro e preencha os campos corretamente com as informações solicitadas. É no registro que você escolhe seu nome/nick do jogo e um email para entrar. O registro é muito simples, não custa nada, não há nenhuma obrigação de sua parte e nem de nossa parte também.",

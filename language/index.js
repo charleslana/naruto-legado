@@ -30,6 +30,7 @@ export const language = () => {
     }
 
     modalTranslate(getTranslations);
+    notLogged(translate);
     home(translate);
 }
 
@@ -53,6 +54,35 @@ const modalTranslate = (getTranslations) => {
             let instance = M.Modal.getInstance(elements);
             instance.close();
         });
+    }
+}
+
+const notLogged = (translate) => {
+    let element;
+
+    element = document.querySelector('#nav-not-logged ul.right > li:nth-child(1) > a');
+    if (element) {
+        element.innerText = translate.NOT_LOGGED_NAV_A;
+    }
+
+    element = document.querySelector('#nav-not-logged ul.right > li:nth-child(2) > a');
+    if (element) {
+        element.innerText = translate.NOT_LOGGED_NAV_B;
+    }
+
+    element = document.querySelector('#nav-not-logged ul.right > li:nth-child(3) > a');
+    if (element) {
+        element.innerText = translate.NOT_LOGGED_NAV_C;
+    }
+
+    element = document.querySelector('footer p');
+    if (element) {
+        element.innerText = translate.FOOTER;
+    }
+
+    element = document.querySelector('.footer-copyright > div > div > div');
+    if (element) {
+        element.innerHTML = translate.FOOTER_COPY;
     }
 }
 
