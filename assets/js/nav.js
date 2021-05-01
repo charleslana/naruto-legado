@@ -157,10 +157,10 @@ const printChat = () => {
             <div id="${general}" class="col s12">
                 <div class="container">
                     <ul class="log">
-                        <li class="log-f-server ">Equipe_NL: Kakuzo derrotou o boss no servidor 1</li>
-                        <li class="log-f-server ">Equipe_NL: Kakuzo derrotou o boss no servidor 1</li>
-                        <li class="log-f-user">Sv1-teste1: oi</li>
-                        <li class="log-f-reived">Sv1-Koujen: opa</li>
+                        <li class="log-f-server ">Equipe_NL: Kakuzo derrotou o boss.</li>
+                        <li class="log-f-server ">Equipe_NL: Kakuzo derrotou o boss.</li>
+                        <li class="log-f-user">Cla-teste1: oi</li>
+                        <li class="log-f-reived">Cla-Koujen: opa</li>
                     </ul>
                     <input type="text" maxlength="150" autocomplete="off" placeholder="Escreva aqui!">
                     <button type="button" class="btn">Enviar</button>
