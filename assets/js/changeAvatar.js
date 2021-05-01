@@ -1,7 +1,7 @@
 import { showUserData, getStorage, saveStorage } from './storage.js';
 import config from './config.js';
 import { toastSuccess } from './toast.js';
-import { confirmDialog, notificationError } from './notification.js';
+import { notificationError } from './notification.js';
 
 export const showAvatar = () => {
     const avatar = document.getElementById('change-avatar');
