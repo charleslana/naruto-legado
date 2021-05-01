@@ -18,7 +18,7 @@ const changePassword = () => {
     const confirmNewPassword = document.getElementById('confirmNewPassword').value;
 
     if (currentPassword === newPassword) {
-        return notificationError('A senha nova não deve ser a mesma da atual');
+        return notificationError('A senha nova não deve ser a mesma da atual.');
     }
 
     if (newPassword !== confirmNewPassword) {

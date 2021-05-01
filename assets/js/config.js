@@ -5,7 +5,8 @@ const config = {
     register: '/mock/register.json',
     changePassword: '/mock/change-password.json',
     changeName: '/mock/change-name.json',
-    changeNinjaStyle: '/mock/change-ninja-style.json'
+    changeNinjaStyle: '/mock/change-ninja-style.json',
+    changeVillage: '/mock/change-village.json'
 }
 
 export default config;

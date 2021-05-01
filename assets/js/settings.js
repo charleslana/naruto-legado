@@ -6,6 +6,7 @@ import { showSound } from './sound.js';
 import addChangePasswordSubmit from './changePassword.js';
 import { getStorage } from './storage.js';
 import { showNinjaStyle, addChangeNinjaStyleSubmit } from './changeNinjaStyle.js';
+import { showVillage, addChangeVillageSubmit } from './changeVillage.js';
 
 const settings = () => {
     showSound();
@@ -24,6 +25,9 @@ const settings = () => {
 
     showNinjaStyle();
     addChangeNinjaStyleSubmit();
+
+    showVillage();
+    addChangeVillageSubmit();
 }
 
 const myEmail = () => {

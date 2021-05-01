@@ -4,49 +4,54 @@ import { toastSuccess } from './toast.js';
 import price from '../../static/prices.js';
 import { showUserData, getStorage, saveStorage } from './storage.js';
 
-export const showNinjaStyle = () => {
-    const ninjaStyle = document.querySelector(`input[name="group1"][value="${getStorage('styleNinja')}"]`);
-    if (ninjaStyle) {
-        ninjaStyle.checked = true;
+export const showVillage = () => {
+    const village = document.querySelector(`input[name="group3"][value="${getStorage('village')}"]`);
+    if (village) {
+        village.checked = true;
     }
 }
 
-export const addChangeNinjaStyleSubmit = () => {
-    const submit = document.getElementById('form-change-ninja-style');
+export const addChangeVillageSubmit = () => {
+    const submit = document.getElementById('form-change-village');
     if (submit) {
         submit.addEventListener('submit', (event) => {
             event.preventDefault();
-            confirmChangeNinjaStyle();
+            confirmChangeVillage();
         });
     }
 }
 
-const confirmChangeNinjaStyle = async () => {
+const confirmChangeVillage = async () => {
     const checkConfirmDialog = await confirmDialog();
 
     if (checkConfirmDialog) {
-        changeNinjaStyle();
+        changeVillage();
     }
 }
 
-const changeNinjaStyle = () => {
+const changeVillage = () => {
     const credits = getStorage('credits');
-    const radioStyleNinja = document.querySelector('input[name="group1"]:checked').value;
+    const clan = getStorage('clan');
+    const radioVillage = document.querySelector('input[name="group3"]:checked').value;
 
-    if (radioStyleNinja === getStorage('styleNinja')) {
-        return notificationError('O estilo ninja novo não deve ser o mesmo do atual.');
+    if (clan === 'true') {
+        return notificationError('Você está em um clã.');
     }
 
-    if (credits < price.changeNinjaStyle) {
+    if (radioVillage === getStorage('village')) {
+        return notificationError('A vila nova não deve ser a mesma da atual.');
+    }
+
+    if (credits < price.changeVillage) {
         return notificationError('Você não tem créditos suficiente.');
     }
 
     disableButton();
 
-    fetch(config.apiBack + config.changeNinjaStyle, {
+    fetch(config.apiBack + config.changeVillage, {
         // method: 'patch',
         // body: JSON.stringify({
-        //     radioStyleNinja
+        //     radioVillage
         // })
     })
         .then(response => {
@@ -54,8 +59,8 @@ const changeNinjaStyle = () => {
         })
         .then(data => {
             if (data.success) {
-                saveStorage('styleNinja', radioStyleNinja);
-                saveStorage('credits', parseInt(credits - price.changeNinjaStyle));
+                saveStorage('village', radioVillage);
+                saveStorage('credits', parseInt(credits - price.changeVillage));
                 showUserData();
                 toastSuccess(data.success.message);
             }
@@ -73,13 +78,13 @@ const changeNinjaStyle = () => {
 }
 
 const disableButton = () => {
-    const submit = document.querySelector('#form-change-ninja-style input[type="submit"]');
+    const submit = document.querySelector('#form-change-village input[type="submit"]');
     submit.value = 'Aguarde';
     submit.setAttribute('disabled', true);
 }
 
 const enableButton = () => {
-    const submit = document.querySelector('#form-change-ninja-style input[type="submit"]');
-    submit.value = 'Trocar estilo';
+    const submit = document.querySelector('#form-change-village input[type="submit"]');
+    submit.value = 'Trocar vila';
     submit.removeAttribute('disabled');
 }
