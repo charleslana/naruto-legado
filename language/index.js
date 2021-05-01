@@ -29,7 +29,31 @@ export const language = () => {
         iconLanguage.src = `assets/img/languages/${getTranslations}.png`;
     }
 
+    modalTranslate(getTranslations);
     home(translate);
+}
+
+const modalTranslate = (getTranslations) => {
+    const elements = document.getElementById('modal-language');
+    if (elements && !getTranslations) {
+        let instance = M.Modal.init(elements, {
+            endingTop: '13%',
+            dismissible: false
+        });
+        instance.open();
+    }
+
+    const addSubmitModal = document.getElementById('form-change-language');
+    if (addSubmitModal) {
+        addSubmitModal.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const chooseLanguage = document.querySelector('input[name="groupLanguage"]:checked').value;
+            saveStorage('language', chooseLanguage);
+            language();
+            let instance = M.Modal.getInstance(elements);
+            instance.close();
+        });
+    }
 }
 
 const home = (translate) => {
