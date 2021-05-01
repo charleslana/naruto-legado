@@ -300,3 +300,16 @@ textarea {
 .toast-warning {
     background-color: #f89406;
 }
+
+.logo-translate {
+    display: inline-block;
+    height: 100%;
+}
+
+.logo-translate > img {
+    position: absolute;
+    height: 100%;
+    left: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+}

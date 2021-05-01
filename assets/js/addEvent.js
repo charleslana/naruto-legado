@@ -7,10 +7,12 @@ import { modalDailyReward } from './modal.js';
 import settings from './settings.js';
 import { showUserData } from './storage.js';
 import news from './news.js';
-import language from '../../language/index.js';
+import { addLanguageSubmit, language } from '../../language/index.js';
 
 export const addEvent = (loadPage) => {
+    addLanguageSubmit();
     language();
+    
     login();
     showLogin();
 
@@ -21,7 +23,7 @@ export const addEvent = (loadPage) => {
 
     showUserData();
     logout(loadPage);
-    
+
     news();
     modalDailyReward();
 

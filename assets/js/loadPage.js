@@ -6,6 +6,7 @@ import { addEvent, preEvent } from './addEvent.js';
 import { sidenav } from './sidenav.js';
 import tab from './tab.js';
 import tooltip from './tooltip.js';
+import dropdown from './dropdown.js';
 
 const loadPage = (page = 'home') => {
 
@@ -33,6 +34,7 @@ const loadPageMain = (page) => {
             preEvent();
             tab();
             tooltip();
+            dropdown();
             click(loadPageMain);
             fetchPageContent(page);
             addEvent(loadPage);

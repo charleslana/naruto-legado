@@ -171,3 +171,11 @@ hr {
 .carousel .carousel-item > img {
     width: auto;
 }
+
+.dropdown-content li:hover, .dropdown-content li.active {
+    background-color: orange;
+}
+
+.dropdown-content li {
+    text-align: center !important;
+}
