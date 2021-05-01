@@ -1,6 +1,6 @@
 import addChangeNameSubmit from './changeName.js';
 import { showAvatar, addChangeAvatarSubmit } from './changeAvatar.js';
-import { showCharacter } from './changeCharacter.js';
+import { showCharacter, addChangeCharacterSubmit } from './changeCharacter.js';
 import { addChangeMural } from './mural.js';
 import { showSound } from './sound.js';
 import addChangePasswordSubmit from './changePassword.js';
@@ -27,6 +27,7 @@ const settings = () => {
     addChangeAvatarSubmit();
 
     showCharacter();
+    addChangeCharacterSubmit();
 
     addChangeMural();
 }

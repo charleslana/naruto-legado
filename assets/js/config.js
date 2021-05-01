@@ -7,7 +7,8 @@ const config = {
     changeName: '/mock/change-name.json',
     changeNinjaStyle: '/mock/change-ninja-style.json',
     changeVillage: '/mock/change-village.json',
-    changeAvatar: '/mock/change-avatar.json'
+    changeAvatar: '/mock/change-avatar.json',
+    changeCharacter: '/mock/change-character.json'
 }
 
 export default config;

@@ -30,6 +30,7 @@ export const saveUserData = (data) => {
     saveStorage('maxYang', data.user.maxYang);
     saveStorage('yens', data.user.yens);
     saveStorage('credits', data.user.credits);
+    saveStorage('character', data.user.character);
     saveStorage('avatarName', data.user.avatarName);
     saveStorage('avatarImage', data.user.avatarImage);
     saveStorage('premium', data.user.premium);
@@ -54,6 +55,7 @@ export const removeUserData = () => {
     removeStorage('maxYang');
     removeStorage('yens');
     removeStorage('credits');
+    removeStorage('character');
     removeStorage('avatarName');
     removeStorage('avatarImage');
     removeStorage('premium');
