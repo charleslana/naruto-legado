@@ -30,6 +30,8 @@ export const language = () => {
     }
 
     modalTranslate(getTranslations);
+    index(translate);
+    footer(translate);
     notLogged(translate);
     home(translate);
 }
@@ -57,6 +59,15 @@ const modalTranslate = (getTranslations) => {
     }
 }
 
+const index = (translate) => {
+    let element;
+
+    element = document.querySelector('.btn-to-top');
+    if (element) {
+        element.innerText = translate.GO_TO_UP;
+    }
+}
+
 const notLogged = (translate) => {
     let element;
 
@@ -74,7 +85,11 @@ const notLogged = (translate) => {
     if (element) {
         element.innerText = translate.NOT_LOGGED_NAV_C;
     }
+}
 
+const footer = (translate) => {
+    let element;
+    
     element = document.querySelector('footer p');
     if (element) {
         element.innerText = translate.FOOTER;
