@@ -6,6 +6,7 @@ import { navDetails, navMenu, navChat } from './nav.js';
 import { modalDailyReward } from './modal.js';
 import settings from './settings.js';
 import { showUserData } from './storage.js';
+import news from './news.js';
 
 export const addEvent = (loadPage) => {
     login();
@@ -18,7 +19,8 @@ export const addEvent = (loadPage) => {
 
     showUserData();
     logout(loadPage);
-
+    
+    news();
     modalDailyReward();
 
     settings();
