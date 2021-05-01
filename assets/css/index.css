@@ -314,3 +314,7 @@ textarea {
     top: 50%;
     transform: translateY(-50%);
 }
+
+.d-inline {
+    display: inline !important;
+}

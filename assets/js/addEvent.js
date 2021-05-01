@@ -34,7 +34,8 @@ export const addEvent = (loadPage) => {
     //remove
     const goToPage = document.getElementById('go-to-page');
     if (goToPage) {
-        goToPage.addEventListener('click', () => {
+        goToPage.addEventListener('click', (event) => {
+            event.preventDefault();
             loadPage('settings');
         });
     }

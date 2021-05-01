@@ -57,23 +57,44 @@ const modalTranslate = (getTranslations) => {
 }
 
 const home = (translate) => {
-    const homeWelcome = document.querySelector('main[page-now="home"] > div > div > h3');
-    if (homeWelcome) {
-        homeWelcome.innerText = translate.HOME_WELCOME;
+    let element;
+
+    const links = [].slice.call(document.querySelectorAll('main[page-now="home"] > div > div a'));
+    if (links) {
+        links.map((link) => {
+            link.innerText = translate.HOME_LINK;
+        });
     }
 
-    const homeDetailsA = document.querySelector('main[page-now="home"] > div > div > div:nth-child(3) > div:nth-child(2) > p:nth-child(1)');
-    if (homeDetailsA) {
-        homeDetailsA.innerText = translate.HOME_DETAILS_A;
+    element = document.querySelector('main[page-now="home"] > div > div > h3');
+    if (element) {
+        element.innerText = translate.HOME_WELCOME;
     }
 
-    const homeDetailsB = document.querySelector('main[page-now="home"] > div > div > div:nth-child(3) > div:nth-child(2) > p:nth-child(2)');
-    if (homeDetailsB) {
-        homeDetailsB.innerText = translate.HOME_DETAILS_B;
+    element = document.querySelector('main[page-now="home"] > div > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(1)');
+    if (element) {
+        element.innerText = translate.HOME_DETAILS_A;
     }
 
-    const homeDetailsC = document.querySelector('main[page-now="home"] > div > div > div:nth-child(3) > div:nth-child(2) > p:nth-child(3)');
-    if (homeDetailsC) {
-        homeDetailsC.innerText = translate.HOME_DETAILS_C;
+    element = document.querySelector('main[page-now="home"] > div > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(2)');
+    if (element) {
+        element.innerText = translate.HOME_DETAILS_B;
+    }
+
+    element = document.querySelector('main[page-now="home"] > div > div > div:nth-child(2) > div:nth-child(2) > p:nth-child(3)');
+    if (element) {
+        element.innerText = translate.HOME_DETAILS_C;
+    }
+
+    element = document.querySelector('main[page-now="home"] > div > div p:nth-child(4)');
+    console.log(element);
+    if (element) {
+        element.innerText = translate.HOME_DETAILS_D;
+    }
+
+    element = document.querySelector('main[page-now="home"] > div > div p:nth-child(7)');
+    console.log(element);
+    if (element) {
+        element.innerText = translate.HOME_DETAILS_E;
     }
 }
