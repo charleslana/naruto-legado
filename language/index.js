@@ -86,15 +86,23 @@ const home = (translate) => {
         element.innerText = translate.HOME_DETAILS_C;
     }
 
-    element = document.querySelector('main[page-now="home"] > div > div p:nth-child(4)');
-    console.log(element);
+    element = document.querySelector('main[page-now="home"] > div > div > p');
     if (element) {
         element.innerText = translate.HOME_DETAILS_D;
     }
 
-    element = document.querySelector('main[page-now="home"] > div > div p:nth-child(7)');
-    console.log(element);
+    element = document.querySelector('main[page-now="home"] > div > div p:nth-child(6)');
     if (element) {
         element.innerText = translate.HOME_DETAILS_E;
+    }
+
+    element = document.querySelector('main[page-now="home"] > div > div p:nth-child(9)');
+    if (element) {
+        element.innerText = translate.HOME_DETAILS_F;
+    }
+
+    element = document.querySelector('main[page-now="home"] > div > div p:nth-child(12)');
+    if (element) {
+        element.innerText = translate.HOME_DETAILS_G;
     }
 }
