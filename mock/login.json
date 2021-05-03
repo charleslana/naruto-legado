@@ -1,6 +1,6 @@
 {
-    "success": {
-        "message": "Credenciais inválidas."
+    "error": {
+        "message": "LOGIN_BAD_REQUEST_INVALID_CREDENTIALS"
     },
     "user": {
         "email": "teste@teste.com",

@@ -1,4 +1,5 @@
 const translateEnglish = {
+    "BUTTON_WAIT": "Wait",
     "NOT_LOGGED_NAV_A": "Home",
     "NOT_LOGGED_NAV_B": "Login",
     "NOT_LOGGED_NAV_C": "Register",
@@ -14,6 +15,12 @@ const translateEnglish = {
     "HOME_DETAILS_E": "New? Click",
     "HOME_DETAILS_F": "Our Discord channel, Click",
     "HOME_DETAILS_G": "Our group on WhatsApp, Click",
+    "LOGIN_PASSWORD": "Password",
+    "LOGIN_DATA": "Save login",
+    "LOGIN_BUTTON": "Login",
+    "LOGIN_DETAILS_A": "Not have an account yet?",
+    "LOGIN_DETAILS_B": "Register",
+    "LOGIN_BAD_REQUEST_INVALID_CREDENTIALS": "Invalid credentials.",
 }
 
 export default translateEnglish;

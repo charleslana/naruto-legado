@@ -316,5 +316,5 @@ textarea {
 }
 
 .d-inline {
-    display: inline !important;
+    display: inline-block !important;
 }

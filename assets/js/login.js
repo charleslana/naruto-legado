@@ -2,6 +2,7 @@ import config from './config.js';
 import { notificationError } from './notification.js';
 import loadPage from './loadPage.js';
 import { saveStorage, getStorage, removeStorage, saveUserData } from './storage.js';
+import { getLanguage } from '../../language/index.js';
 
 export const login = () => {
     const buttonLogin = document.getElementById('form-login');
@@ -16,8 +17,9 @@ export const login = () => {
 const doLogin = () => {
     const inputEmail = document.getElementById('email').value;
     const inputPassword = document.getElementById('password').value;
+    const translate = getLanguage();
 
-    disableButton();
+    disableButton(translate);
 
     fetch(config.apiBack + config.login, {
         // method: 'post',
@@ -37,25 +39,25 @@ const doLogin = () => {
             }
 
             if (data.error) {
-                enableButton();
-                notificationError(data.error.message);
+                enableButton(translate);
+                notificationError(translate[data.error.message]);
             }
         })
         .catch(error => {
-            enableButton();
+            enableButton(translate);
             notificationError(error.message);
         });
 }
 
-const disableButton = () => {
+const disableButton = (translate) => {
     const submit = document.querySelector('#form-login input[type="submit"]');
-    submit.value = 'Aguarde';
+    submit.value = translate.BUTTON_WAIT;
     submit.setAttribute('disabled', true);
 }
 
-const enableButton = () => {
+const enableButton = (translate) => {
     const submit = document.querySelector('#form-login input[type="submit"]');
-    submit.value = 'Entrar';
+    submit.value = translate.LOGIN_BUTTON;
     submit.removeAttribute('disabled');
 }
 

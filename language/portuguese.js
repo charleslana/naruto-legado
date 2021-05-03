@@ -1,4 +1,5 @@
 const translatePortuguese = {
+    "BUTTON_WAIT": "Aguarde",
     "NOT_LOGGED_NAV_A": "Home",
     "NOT_LOGGED_NAV_B": "Login",
     "NOT_LOGGED_NAV_C": "Cadastrar-se",
@@ -14,6 +15,12 @@ const translatePortuguese = {
     "HOME_DETAILS_E": "Novo? Clique",
     "HOME_DETAILS_F": "Nosso canal no Discord, Clique",
     "HOME_DETAILS_G": "Nosso grupo no WhatsApp, Clique",
+    "LOGIN_PASSWORD": "Senha",
+    "LOGIN_DATA": "Salvar login",
+    "LOGIN_BUTTON": "Entrar",
+    "LOGIN_DETAILS_A": "Ainda não tem uma conta?",
+    "LOGIN_DETAILS_B": "Cadastrar",
+    "LOGIN_BAD_REQUEST_INVALID_CREDENTIALS": "Credenciais inválidas.",
 }
 
 export default translatePortuguese;

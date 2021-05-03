@@ -20,9 +20,13 @@ export const addLanguageSubmit = () => {
     }
 }
 
+export const getLanguage = () => {
+    const getTranslations = getStorage('language');
+    return getTranslations === 'pt' || !getTranslations ? translatePortuguese : translateEnglish;
+}
+
 export const language = () => {
     const getTranslations = getStorage('language');
-    const translate = getTranslations === 'pt' || !getTranslations ? translatePortuguese : translateEnglish;
     
     const iconLanguage = document.getElementById('icon-language');
     if (iconLanguage && getTranslations) {
@@ -30,10 +34,14 @@ export const language = () => {
     }
 
     modalTranslate(getTranslations);
+
+    const translate = getLanguage();
+    
     index(translate);
     footer(translate);
     notLogged(translate);
     home(translate);
+    login(translate);
 }
 
 const modalTranslate = (getTranslations) => {
@@ -149,5 +157,34 @@ const home = (translate) => {
     element = document.querySelector('main[page-now="home"] > div > div p:nth-child(12)');
     if (element) {
         element.innerText = translate.HOME_DETAILS_G;
+    }
+}
+
+const login = (translate) => {
+    let element;
+    
+    element = document.querySelector('main[page-now="login"] #form-login .input-field:nth-child(2) > label');
+    if (element) {
+        element.innerText = translate.LOGIN_PASSWORD;
+    }
+
+    element = document.querySelector('main[page-now="login"] #form-login > p > label > span');
+    if (element) {
+        element.innerText = translate.LOGIN_DATA;
+    }
+
+    element = document.querySelector('main[page-now="login"] #form-login > input');
+    if (element) {
+        element.value = translate.LOGIN_BUTTON;
+    }
+
+    element = document.querySelector('main[page-now="login"] p.d-inline');
+    if (element) {
+        element.innerText = translate.LOGIN_DETAILS_A;
+    }
+
+    element = document.querySelector('main[page-now="login"] a.click-action');
+    if (element) {
+        element.innerText = translate.LOGIN_DETAILS_B;
     }
 }
