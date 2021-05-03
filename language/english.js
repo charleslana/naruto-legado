@@ -1,4 +1,6 @@
 const translateEnglish = {
+    "NOTIFICATION_ERROR": "Error!",
+    "NOTIFICATION_SUCCESS": "Success!",
     "BUTTON_WAIT": "Wait",
     "NOT_LOGGED_NAV_A": "Home",
     "NOT_LOGGED_NAV_B": "Login",
@@ -15,6 +17,8 @@ const translateEnglish = {
     "HOME_DETAILS_E": "New? Click",
     "HOME_DETAILS_F": "Our Discord channel, Click",
     "HOME_DETAILS_G": "Our group on WhatsApp, Click",
+    "LOGIN_TITLE": "Login",
+    "LOGIN_EMAIL": "Email",
     "LOGIN_PASSWORD": "Password",
     "LOGIN_DATA": "Save login",
     "LOGIN_BUTTON": "Login",

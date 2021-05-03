@@ -36,7 +36,7 @@ export const language = () => {
     modalTranslate(getTranslations);
 
     const translate = getLanguage();
-    
+
     index(translate);
     footer(translate);
     notLogged(translate);
@@ -162,6 +162,16 @@ const home = (translate) => {
 
 const login = (translate) => {
     let element;
+
+    element = document.querySelector('main[page-now="login"] h3');
+    if (element) {
+        element.innerText = translate.LOGIN_TITLE;
+    }
+
+    element = document.querySelector('main[page-now="login"] #form-login .input-field:nth-child(1) > label');
+    if (element) {
+        element.innerText = translate.LOGIN_EMAIL;
+    }
     
     element = document.querySelector('main[page-now="login"] #form-login .input-field:nth-child(2) > label');
     if (element) {

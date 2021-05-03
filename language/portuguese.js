@@ -1,4 +1,6 @@
 const translatePortuguese = {
+    "NOTIFICATION_ERROR": "Erro!",
+    "NOTIFICATION_SUCCESS": "Sucesso!",
     "BUTTON_WAIT": "Aguarde",
     "NOT_LOGGED_NAV_A": "Home",
     "NOT_LOGGED_NAV_B": "Login",
@@ -15,6 +17,8 @@ const translatePortuguese = {
     "HOME_DETAILS_E": "Novo? Clique",
     "HOME_DETAILS_F": "Nosso canal no Discord, Clique",
     "HOME_DETAILS_G": "Nosso grupo no WhatsApp, Clique",
+    "LOGIN_TITLE": "Conecte-se",
+    "LOGIN_EMAIL": "E-mail",
     "LOGIN_PASSWORD": "Senha",
     "LOGIN_DATA": "Salvar login",
     "LOGIN_BUTTON": "Entrar",

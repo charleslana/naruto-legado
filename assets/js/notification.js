@@ -1,15 +1,21 @@
+import { getLanguage } from '../../language/index.js';
+
 export const notificationError = (message) => {
+    const translate = getLanguage();
+
     Swal.fire({
         icon: 'error',
-        title: 'Erro!',
+        title: translate.NOTIFICATION_ERROR,
         text: message
     });
 }
 
 export const notificationSuccess = (message) => {
+    const translate = getLanguage();
+    
     Swal.fire({
         icon: 'success',
-        title: 'Sucesso!',
+        title: translate.NOTIFICATION_SUCCESS,
         text: message
     });
 }
