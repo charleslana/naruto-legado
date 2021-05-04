@@ -1,5 +1,5 @@
 import { recreateNode } from './functions.js';
-import { closeSidenav } from './sidenav.js';
+import { closeDetailsSidenav, closeMenuSidenav } from './sidenav.js';
 import { removeUserData } from './storage.js';
 
 const logout = (loadPage) => {
@@ -8,7 +8,8 @@ const logout = (loadPage) => {
     clickActions.map((clickAction) => {
         clickAction.addEventListener('click', function (event) {
             event.preventDefault();
-            closeSidenav();
+            closeDetailsSidenav();
+            closeMenuSidenav();
             removeUserData();
             loadPage('login');
         });
