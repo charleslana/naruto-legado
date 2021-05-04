@@ -3,7 +3,7 @@ const translatePortuguese = {
     "NOTIFICATION_SUCCESS": "Sucesso!",
     "BUTTON_WAIT": "Aguarde",
     "NOT_LOGGED_NAV_A": "Início",
-    "NOT_LOGGED_NAV_B": "Conecte-se",
+    "NOT_LOGGED_NAV_B": "Entrar",
     "NOT_LOGGED_NAV_C": "Cadastrar-se",
     "FOOTER": "Jogar Naruto Legado é totalmente gratuito e sem nenhum compromisso. Somos um fã site e os direitos autorais desta obra estão reservados ao criador da série japonesa. Todos os direitos sobre NARUTO são reservados a Masashi Kishimoto. Todo e qualquer lucro obtido neste site são usados na manutenção do site em despesas com servidores e programação do jogo.",
     "FOOTER_COPY": "© 2021 Copyright - Todos direitos reservados a Naruto Legado by Charles fan made<br> © 2021 Copyright - Todos direitos do anime e imagens reservados a Masashi Kishimoto",
@@ -26,7 +26,14 @@ const translatePortuguese = {
     "LOGIN_DETAILS_B": "Cadastrar",
     "LOGIN_BAD_REQUEST_INVALID_CREDENTIALS": "Credenciais inválidas.",
     "LOGIN_NINJAS_ONLINE": "Ninjas Online",
+    "LOGIN_NINJAS_ONLINE_TABLE_A": "Status",
+    "LOGIN_NINJAS_ONLINE_TABLE_B": "Nome",
+    "LOGIN_NINJAS_ONLINE_TABLE_C": "Vila",
+    "LOGIN_NINJAS_ONLINE_TABLE_D": "Nível",
+    "LOGIN_NINJAS_ONLINE_TABLE_E": "Pontos",
     "LOGIN_ACTIVE_EVENTS": "Eventos Ativos",
+    "LOGIN_ACTIVE_EVENTS_TABLE_A": "Status",
+    "LOGIN_ACTIVE_EVENTS_TABLE_B": "Nome",
 }
 
 export default translatePortuguese;

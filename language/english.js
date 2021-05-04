@@ -26,7 +26,14 @@ const translateEnglish = {
     "LOGIN_DETAILS_B": "Register",
     "LOGIN_BAD_REQUEST_INVALID_CREDENTIALS": "Invalid credentials.",
     "LOGIN_NINJAS_ONLINE": "Ninjas Online",
+    "LOGIN_NINJAS_ONLINE_TABLE_A": "Status",
+    "LOGIN_NINJAS_ONLINE_TABLE_B": "Name",
+    "LOGIN_NINJAS_ONLINE_TABLE_C": "Village",
+    "LOGIN_NINJAS_ONLINE_TABLE_D": "Level",
+    "LOGIN_NINJAS_ONLINE_TABLE_E": "Score",
     "LOGIN_ACTIVE_EVENTS": "Active Events",
+    "LOGIN_ACTIVE_EVENTS_TABLE_A": "Status",
+    "LOGIN_ACTIVE_EVENTS_TABLE_B": "Name",
 }
 
 export default translateEnglish;

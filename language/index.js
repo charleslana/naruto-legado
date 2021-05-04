@@ -203,8 +203,43 @@ const login = (translate) => {
         element.innerText = translate.LOGIN_NINJAS_ONLINE;
     }
 
+    element = document.getElementById('ninjaStatus');
+    if (element) {
+        element.innerText = translate.LOGIN_NINJAS_ONLINE_TABLE_A;
+    }
+
+    element = document.getElementById('ninjaName');
+    if (element) {
+        element.innerText = translate.LOGIN_NINJAS_ONLINE_TABLE_B;
+    }
+
+    element = document.getElementById('ninjaVillage');
+    if (element) {
+        element.innerText = translate.LOGIN_NINJAS_ONLINE_TABLE_C;
+    }
+
+    element = document.getElementById('ninjaLevel');
+    if (element) {
+        element.innerText = translate.LOGIN_NINJAS_ONLINE_TABLE_D;
+    }
+
+    element = document.getElementById('ninjaScore');
+    if (element) {
+        element.innerText = translate.LOGIN_NINJAS_ONLINE_TABLE_E;
+    }
+
     element = document.querySelector('main[page-now="login"] > div div:nth-child(2) div:nth-child(2) > h3');
     if (element) {
         element.innerText = translate.LOGIN_ACTIVE_EVENTS;
+    }
+
+    element = document.getElementById('eventStatus');
+    if (element) {
+        element.innerText = translate.LOGIN_ACTIVE_EVENTS_TABLE_A;
+    }
+
+    element = document.getElementById('eventName');
+    if (element) {
+        element.innerText = translate.LOGIN_ACTIVE_EVENTS_TABLE_B;
     }
 }
