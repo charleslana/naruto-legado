@@ -25,6 +25,8 @@ const translatePortuguese = {
     "LOGIN_DETAILS_A": "Ainda não tem uma conta?",
     "LOGIN_DETAILS_B": "Cadastrar",
     "LOGIN_BAD_REQUEST_INVALID_CREDENTIALS": "Credenciais inválidas.",
+    "LOGIN_NINJAS_ONLINE": "Ninjas Online",
+    "LOGIN_ACTIVE_EVENTS": "Eventos Ativos",
 }
 
 export default translatePortuguese;

@@ -25,6 +25,8 @@ const translateEnglish = {
     "LOGIN_DETAILS_A": "Not have an account yet?",
     "LOGIN_DETAILS_B": "Register",
     "LOGIN_BAD_REQUEST_INVALID_CREDENTIALS": "Invalid credentials.",
+    "LOGIN_NINJAS_ONLINE": "Ninjas Online",
+    "LOGIN_ACTIVE_EVENTS": "Active Events",
 }
 
 export default translateEnglish;

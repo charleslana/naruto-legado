@@ -197,4 +197,14 @@ const login = (translate) => {
     if (element) {
         element.innerText = translate.LOGIN_DETAILS_B;
     }
+
+    element = document.querySelector('main[page-now="login"] > div div:nth-child(2) > div > h3');
+    if (element) {
+        element.innerText = translate.LOGIN_NINJAS_ONLINE;
+    }
+
+    element = document.querySelector('main[page-now="login"] > div div:nth-child(2) div:nth-child(2) > h3');
+    if (element) {
+        element.innerText = translate.LOGIN_ACTIVE_EVENTS;
+    }
 }
