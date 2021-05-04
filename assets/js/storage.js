@@ -67,6 +67,7 @@ export const removeUserData = () => {
 export const showUserData = () => {
     const name = getStorage('name');
     const level = getStorage('level');
+    const village = getStorage('village');
     const minExperience = getStorage('minExperience');
     const maxExperience = getStorage('maxExperience');
     const minLife = getStorage('minLife');
@@ -92,6 +93,8 @@ export const showUserData = () => {
         const detailsYens = [].slice.call(document.querySelectorAll('.details-yens'));
         const detailsCredits = [].slice.call(document.querySelectorAll('.details-credits'));
         const menuAvatar = [].slice.call(document.querySelectorAll('.menu-avatar'));
+        const menuVillage = [].slice.call(document.querySelectorAll('.menu-village'));
+
         if (detailsName) {
             detailsName.map(detail => {
                 detail.innerHTML = name;
@@ -131,6 +134,10 @@ export const showUserData = () => {
 
             menuAvatar.map(menu => {
                 menu.src = `assets/img/avatar/${avatarName}/${avatarImage}.png`;
+            });
+
+            menuVillage.map(menu => {
+                menu.src = `assets/img/villages/${village}.png`;
             });
         }
     }

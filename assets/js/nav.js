@@ -24,6 +24,7 @@ export const navDetails = () => {
 export const navMenu = () => {
     const print = `
         <img src="assets/img/avatar/Boruto/1.png" alt="Avatar" class="col-padding-img responsive-img menu-avatar" />
+        <img src="assets/img/villages/1.png" alt="Village" class="responsive-img menu-village" />
         <h6 class="c-orange">Equipados/Ativos</h6>
         <div class="tooltipped"
             data-position="bottom" data-tooltip="
