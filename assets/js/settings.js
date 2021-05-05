@@ -15,7 +15,7 @@ const settings = () => {
 
     addChangeNameSubmit();
 
-    myEmail();
+    showEmail();
 
     showNinjaStyle();
     addChangeNinjaStyleSubmit();
@@ -31,12 +31,21 @@ const settings = () => {
 
     addChangeMuralSubmit();
     showMural();
+
+    showLanguage();
 }
 
-const myEmail = () => {
+const showEmail = () => {
     const email = document.getElementById('myEmail');
     if (email) {
         email.value = getStorage('email');
+    }
+}
+
+export const showLanguage = () => {
+    const language = document.querySelector(`input[name="groupLanguage"][value="${getStorage('language')}"]`);
+    if (language) {
+        language.checked = true;
     }
 }
 
