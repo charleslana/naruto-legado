@@ -29,7 +29,7 @@ export const navMenu = () => {
         <div class="tooltipped"
             data-position="bottom" data-tooltip="
             <p>Kawarimi no Jutsu</p>
-            <p>Ao usar esse item você ficará imune a ataques normais por 12 horas</p>
+            <p>Ao usar esse item você ficará imune a ataques normais por 24 horas</p>
             <p>Ativado</p>
             <p>Expira em: 2021-05-03 07:19:27</p>
             ">
