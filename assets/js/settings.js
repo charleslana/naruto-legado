@@ -42,7 +42,7 @@ const showEmail = () => {
     }
 }
 
-export const showLanguage = () => {
+const showLanguage = () => {
     const language = document.querySelector(`input[name="groupLanguage"][value="${getStorage('language')}"]`);
     if (language) {
         language.checked = true;
